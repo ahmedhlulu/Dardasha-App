@@ -37,6 +37,7 @@ class FUserListener {
                 return
             }
             
+            
             authResults!.user.sendEmailVerification { error in
                 if error != nil{
                     completion(error)
