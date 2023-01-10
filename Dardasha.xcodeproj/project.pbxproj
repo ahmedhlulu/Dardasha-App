@@ -14,7 +14,6 @@
 		E208A0E428CD9BFF00F2392D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E208A0E228CD9BFF00F2392D /* Main.storyboard */; };
 		E208A0E628CD9C0000F2392D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E208A0E528CD9C0000F2392D /* Assets.xcassets */; };
 		E208A0E928CD9C0000F2392D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E208A0E728CD9C0000F2392D /* LaunchScreen.storyboard */; };
-		E28B251E28CDA66C00ABBD7E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E28B251D28CDA66C00ABBD7E /* GoogleService-Info.plist */; };
 		E28B252028CDBDA900ABBD7E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B251F28CDBDA900ABBD7E /* User.swift */; };
 		E28B252528CDBE7000ABBD7E /* FCollectionRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B252428CDBE7000ABBD7E /* FCollectionRef.swift */; };
 		E28B252728CDBF4D00ABBD7E /* FUserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B252628CDBF4D00ABBD7E /* FUserListener.swift */; };
@@ -41,7 +40,6 @@
 		E2D3218828CF7614004B9518 /* FChatRoomListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3218728CF7614004B9518 /* FChatRoomListener.swift */; };
 		E2D3218A28D041CE004B9518 /* MSGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3218928D041CE004B9518 /* MSGViewController.swift */; };
 		E2D3218C28D04AED004B9518 /* LocalMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3218B28D04AED004B9518 /* LocalMessage.swift */; };
-		E2D3218F28D0534E004B9518 /* MessagesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3218E28D0534E004B9518 /* MessagesDataSource.swift */; };
 		E2D3219128D05360004B9518 /* MessagesCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3219028D05360004B9518 /* MessagesCellDelegate.swift */; };
 		E2D3219328D05372004B9518 /* MessagesDisplayDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3219228D05372004B9518 /* MessagesDisplayDelegate.swift */; };
 		E2D3219528D05382004B9518 /* MessageLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3219428D05382004B9518 /* MessageLayoutDelegate.swift */; };
@@ -54,6 +52,15 @@
 		E2D321A328D06A1D004B9518 /* Incoming.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D321A228D06A1D004B9518 /* Incoming.swift */; };
 		E2D321A528D1CCB3004B9518 /* FTypingListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D321A428D1CCB3004B9518 /* FTypingListener.swift */; };
 		E2D321A728D34A5E004B9518 /* PhotoMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D321A628D34A5E004B9518 /* PhotoMessage.swift */; };
+		E2DB6E7A296CD5B1000A6552 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2DB6E79296CD5B1000A6552 /* GoogleService-Info.plist */; };
+		E2DB6E7C296CDD73000A6552 /* ChannelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6E7B296CDD73000A6552 /* ChannelTableViewCell.swift */; };
+		E2DB6E7E296CDEE2000A6552 /* ChannelsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6E7D296CDEE2000A6552 /* ChannelsTableViewController.swift */; };
+		E2DB6E80296CE08B000A6552 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6E7F296CE08B000A6552 /* Channel.swift */; };
+		E2DB6E82296CEFE1000A6552 /* AddChannelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6E81296CEFE1000A6552 /* AddChannelTableViewController.swift */; };
+		E2DB6E84296CF652000A6552 /* FChannelLisener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6E83296CF652000A6552 /* FChannelLisener.swift */; };
+		E2DB6E86296D08F8000A6552 /* ChannelFollowTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6E85296D08F8000A6552 /* ChannelFollowTableViewController.swift */; };
+		E2DB6E88296D18FF000A6552 /* ChannelMSGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6E87296D18FF000A6552 /* ChannelMSGViewController.swift */; };
+		E2DB6E8B296D27CF000A6552 /* MessagesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6E8A296D27CF000A6552 /* MessagesDataSource.swift */; };
 		E2E7253D28F845C20044D034 /* BasicAudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E7253C28F845C20044D034 /* BasicAudioController.swift */; };
 		E2F3745A29358C0E00EFCB19 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E2F3745929358C0E00EFCB19 /* FirebaseAnalytics */; };
 		E2F3745C29358C0E00EFCB19 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E2F3745B29358C0E00EFCB19 /* FirebaseAuth */; };
@@ -80,7 +87,6 @@
 		E208A0E528CD9C0000F2392D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E208A0E828CD9C0000F2392D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E208A0EA28CD9C0000F2392D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E28B251D28CDA66C00ABBD7E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E28B251F28CDBDA900ABBD7E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E28B252428CDBE7000ABBD7E /* FCollectionRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionRef.swift; sourceTree = "<group>"; };
 		E28B252628CDBF4D00ABBD7E /* FUserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FUserListener.swift; sourceTree = "<group>"; };
@@ -107,7 +113,6 @@
 		E2D3218728CF7614004B9518 /* FChatRoomListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FChatRoomListener.swift; sourceTree = "<group>"; };
 		E2D3218928D041CE004B9518 /* MSGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSGViewController.swift; sourceTree = "<group>"; };
 		E2D3218B28D04AED004B9518 /* LocalMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalMessage.swift; sourceTree = "<group>"; };
-		E2D3218E28D0534E004B9518 /* MessagesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesDataSource.swift; sourceTree = "<group>"; };
 		E2D3219028D05360004B9518 /* MessagesCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesCellDelegate.swift; sourceTree = "<group>"; };
 		E2D3219228D05372004B9518 /* MessagesDisplayDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesDisplayDelegate.swift; sourceTree = "<group>"; };
 		E2D3219428D05382004B9518 /* MessageLayoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageLayoutDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +125,15 @@
 		E2D321A228D06A1D004B9518 /* Incoming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Incoming.swift; sourceTree = "<group>"; };
 		E2D321A428D1CCB3004B9518 /* FTypingListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTypingListener.swift; sourceTree = "<group>"; };
 		E2D321A628D34A5E004B9518 /* PhotoMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMessage.swift; sourceTree = "<group>"; };
+		E2DB6E79296CD5B1000A6552 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E2DB6E7B296CDD73000A6552 /* ChannelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableViewCell.swift; sourceTree = "<group>"; };
+		E2DB6E7D296CDEE2000A6552 /* ChannelsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsTableViewController.swift; sourceTree = "<group>"; };
+		E2DB6E7F296CE08B000A6552 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		E2DB6E81296CEFE1000A6552 /* AddChannelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelTableViewController.swift; sourceTree = "<group>"; };
+		E2DB6E83296CF652000A6552 /* FChannelLisener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FChannelLisener.swift; sourceTree = "<group>"; };
+		E2DB6E85296D08F8000A6552 /* ChannelFollowTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelFollowTableViewController.swift; sourceTree = "<group>"; };
+		E2DB6E87296D18FF000A6552 /* ChannelMSGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelMSGViewController.swift; sourceTree = "<group>"; };
+		E2DB6E8A296D27CF000A6552 /* MessagesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesDataSource.swift; sourceTree = "<group>"; };
 		E2E7253C28F845C20044D034 /* BasicAudioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAudioController.swift; sourceTree = "<group>"; };
 		E2F3747229358D1900EFCB19 /* ImagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesController.swift; sourceTree = "<group>"; };
 		E2F3747329358D1900EFCB19 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
@@ -257,6 +271,7 @@
 				E2C164B828F8365400BF30BF /* AudioRecorder.swift */,
 				E2C164AF28F8238A00BF30BF /* MediaMessages */,
 				E2E7253C28F845C20044D034 /* BasicAudioController.swift */,
+				E2DB6E7F296CE08B000A6552 /* Channel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -283,6 +298,10 @@
 				E2D3218328CF695A004B9518 /* ChatsTableViewController.swift */,
 				E2C164B428F832CA00BF30BF /* MapViewController.swift */,
 				E2D3218D28D052E5004B9518 /* MSGViewController */,
+				E2DB6E7D296CDEE2000A6552 /* ChannelsTableViewController.swift */,
+				E2DB6E81296CEFE1000A6552 /* AddChannelTableViewController.swift */,
+				E2DB6E85296D08F8000A6552 /* ChannelFollowTableViewController.swift */,
+				E2DB6E87296D18FF000A6552 /* ChannelMSGViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -290,13 +309,14 @@
 		E28B252C28CDE4D100ABBD7E /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				E28B251D28CDA66C00ABBD7E /* GoogleService-Info.plist */,
+				E2DB6E79296CD5B1000A6552 /* GoogleService-Info.plist */,
 				E28B252428CDBE7000ABBD7E /* FCollectionRef.swift */,
 				E28B253028CDF5EB00ABBD7E /* FileStorage.swift */,
 				E28B252628CDBF4D00ABBD7E /* FUserListener.swift */,
 				E2D3218728CF7614004B9518 /* FChatRoomListener.swift */,
 				E2D3219E28D06305004B9518 /* FMessageListener.swift */,
 				E2D321A428D1CCB3004B9518 /* FTypingListener.swift */,
+				E2DB6E83296CF652000A6552 /* FChannelLisener.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -328,6 +348,7 @@
 			children = (
 				E2D3217928CF522D004B9518 /* UsersTableViewCell.swift */,
 				E2D3218128CF6927004B9518 /* ChatTableViewCell.swift */,
+				E2DB6E7B296CDD73000A6552 /* ChannelTableViewCell.swift */,
 			);
 			path = CellControllers;
 			sourceTree = "<group>";
@@ -336,7 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				E2D3218928D041CE004B9518 /* MSGViewController.swift */,
-				E2D3218E28D0534E004B9518 /* MessagesDataSource.swift */,
+				E2DB6E8A296D27CF000A6552 /* MessagesDataSource.swift */,
 				E2D3219028D05360004B9518 /* MessagesCellDelegate.swift */,
 				E2D3219228D05372004B9518 /* MessagesDisplayDelegate.swift */,
 				E2D3219428D05382004B9518 /* MessageLayoutDelegate.swift */,
@@ -601,7 +622,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E208A0E928CD9C0000F2392D /* LaunchScreen.storyboard in Resources */,
-				E28B251E28CDA66C00ABBD7E /* GoogleService-Info.plist in Resources */,
+				E2DB6E7A296CD5B1000A6552 /* GoogleService-Info.plist in Resources */,
 				E208A0E628CD9C0000F2392D /* Assets.xcassets in Resources */,
 				E208A0E428CD9BFF00F2392D /* Main.storyboard in Resources */,
 			);
@@ -657,12 +678,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2C164B328F8311900BF30BF /* LocationMessgae.swift in Sources */,
+				E2DB6E84296CF652000A6552 /* FChannelLisener.swift in Sources */,
 				E28B252B28CDDE8300ABBD7E /* SettingTableViewController.swift in Sources */,
 				E2D321A328D06A1D004B9518 /* Incoming.swift in Sources */,
+				E2DB6E88296D18FF000A6552 /* ChannelMSGViewController.swift in Sources */,
+				E2DB6E86296D08F8000A6552 /* ChannelFollowTableViewController.swift in Sources */,
 				E2D3219728D05398004B9518 /* InputBarAccessoryViewDelegate.swift in Sources */,
 				E2C164B928F8365400BF30BF /* AudioRecorder.swift in Sources */,
 				E2D3219F28D06305004B9518 /* FMessageListener.swift in Sources */,
-				E2D3218F28D0534E004B9518 /* MessagesDataSource.swift in Sources */,
 				E28B253128CDF5EB00ABBD7E /* FileStorage.swift in Sources */,
 				E2C164B128F82C5500BF30BF /* LocationManager.swift in Sources */,
 				E28B253328CDFF4000ABBD7E /* GlobalFunc.swift in Sources */,
@@ -671,14 +694,18 @@
 				E2D3219B28D0563A004B9518 /* MKMessage.swift in Sources */,
 				E2D3219528D05382004B9518 /* MessageLayoutDelegate.swift in Sources */,
 				E28B253528CE055300ABBD7E /* Extenstions.swift in Sources */,
+				E2DB6E82296CEFE1000A6552 /* AddChannelTableViewController.swift in Sources */,
 				E2D3218028CF6647004B9518 /* ChatRoom.swift in Sources */,
 				E2C164AE28F8236A00BF30BF /* VideoMessage.swift in Sources */,
 				E2D3219128D05360004B9518 /* MessagesCellDelegate.swift in Sources */,
 				E2D3218828CF7614004B9518 /* FChatRoomListener.swift in Sources */,
+				E2DB6E80296CE08B000A6552 /* Channel.swift in Sources */,
+				E2DB6E7E296CDEE2000A6552 /* ChannelsTableViewController.swift in Sources */,
 				E2D3217E28CF61DE004B9518 /* ProfileTableViewController.swift in Sources */,
 				E2C164B528F832CA00BF30BF /* MapViewController.swift in Sources */,
 				E208A0E128CD9BFF00F2392D /* LoginViewController.swift in Sources */,
 				E2D321A728D34A5E004B9518 /* PhotoMessage.swift in Sources */,
+				E2DB6E8B296D27CF000A6552 /* MessagesDataSource.swift in Sources */,
 				E2D3219928D05561004B9518 /* MKSender.swift in Sources */,
 				E208A0DD28CD9BFF00F2392D /* AppDelegate.swift in Sources */,
 				E2D3219D28D0623B004B9518 /* RealmManager.swift in Sources */,
@@ -693,6 +720,7 @@
 				E2D3218628CF70A6004B9518 /* StartChat.swift in Sources */,
 				E28B252528CDBE7000ABBD7E /* FCollectionRef.swift in Sources */,
 				E2D3219328D05372004B9518 /* MessagesDisplayDelegate.swift in Sources */,
+				E2DB6E7C296CDD73000A6552 /* ChannelTableViewCell.swift in Sources */,
 				E2D3217C28CF5247004B9518 /* UsersTableViewController.swift in Sources */,
 				E2D3218C28D04AED004B9518 /* LocalMessage.swift in Sources */,
 				E208A0DF28CD9BFF00F2392D /* SceneDelegate.swift in Sources */,

@@ -25,6 +25,15 @@ class FMessageListener {
         }
     }
     
+    // MARK: - send Channel
+    func addChannelMessage(_ message: LocalMessage, channel: Channel){
+        do {
+            try FirestoreReference(.Message).document(channel.id).collection(channel.id).document(message.id).setData(from: message)
+        }catch{
+            print("Error saving message to firestore: ",error.localizedDescription)
+        }
+    }
+    
     func checkForOldMessages(documentId: String, collectionId: String){
         FirestoreReference(.Message).document(documentId).collection(collectionId).getDocuments { querySnapshot, error in
             guard let document = querySnapshot?.documents else {return}
@@ -99,7 +108,9 @@ class FMessageListener {
     
     func removeNewMessgaeListener(){
         self.newMessageListener.remove()
-        self.updatedMessageListener.remove()
+        if updatedMessageListener != nil{
+            self.updatedMessageListener.remove()
+        }
     }
     
 }

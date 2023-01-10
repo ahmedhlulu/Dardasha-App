@@ -36,8 +36,9 @@ class LoginViewController: UIViewController {
         passwordTF.delegate = self
         confermPassTF.delegate = self
         
-        emailTF.text = "ahmadhlulu@gmail.com"
-        passwordTF.text = "123456"
+        emailTF.text = testEmail
+        passwordTF.text = testEmailPassword
+        confermPassTF.text = testEmailPassword
     }
     
     

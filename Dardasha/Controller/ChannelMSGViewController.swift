@@ -1,8 +1,8 @@
 //
-//  MSGViewController.swift
+//  ChannelMSGViewController.swift
 //  Dardasha
 //
-//  Created by Ahmed on 13/09/2022.
+//  Created by Ahmed on 10/01/2023.
 //
 
 import UIKit
@@ -11,27 +11,29 @@ import InputBarAccessoryView
 import Gallery
 import RealmSwift
 
-class MSGViewController: MessagesViewController {
+class ChannelMSGViewController: MessagesViewController {
     
     //custom view for title
     let leftBarButtonView: UIView = {
         return UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
     }()
-    let titleLabel: UILabel = {
-        let title = UILabel(frame: CGRect(x: 5, y: 0, width: 100, height: 25))
-        title.textAlignment = .left
-        title.font = UIFont.systemFont(ofSize: 60, weight: .medium)
-        title.adjustsFontSizeToFitWidth = true
-        return title
-    }()
-    let subTitleLabel: UILabel = {
-        let subTitle = UILabel(frame: CGRect(x: 5, y: 22, width: 100, height: 25))
-        subTitle.font = UIFont.systemFont(ofSize: 12, weight: .medium)
-        subTitle.textColor = .systemGray
-        subTitle.adjustsFontSizeToFitWidth = true
-        subTitle.textAlignment = .left
-        return subTitle
-    }()
+//    let titleLabel: UILabel = {
+//        let title = UILabel(frame: CGRect(x: 5, y: 0, width: 100, height: 25))
+//        title.textAlignment = .left
+//        title.font = UIFont.systemFont(ofSize: 60, weight: .medium)
+//        title.adjustsFontSizeToFitWidth = true
+//        return title
+//    }()
+//    let subTitleLabel: UILabel = {
+//        let subTitle = UILabel(frame: CGRect(x: 5, y: 22, width: 100, height: 25))
+//        subTitle.font = UIFont.systemFont(ofSize: 12, weight: .medium)
+//        subTitle.textColor = .systemGray
+//        subTitle.adjustsFontSizeToFitWidth = true
+//        subTitle.textAlignment = .left
+//        return subTitle
+//    }()
+    
+    var channel: Channel!
     
     private var chatId = ""
     private var recipientId = ""
@@ -56,7 +58,7 @@ class MSGViewController: MessagesViewController {
     var maxMessageNumber = 0
     var minMessageNumber = 0
     
-    var typingCounter = 0
+//    var typingCounter = 0
     
     var gallery : GalleryController!
     
@@ -67,12 +69,14 @@ class MSGViewController: MessagesViewController {
     
     open lazy var audioController = BasicAudioController(messageCollectionView: messagesCollectionView)
     
-    init(chatId:String, recipientId:String, recipientName:String){
+    init(channel: Channel){
         super.init(nibName: nil, bundle: nil)
         
-        self.chatId = chatId
-        self.recipientId = recipientId
-        self.recipientName = recipientName
+        self.chatId = channel.id
+        self.recipientId = channel.id
+        self.recipientName = channel.name
+        
+        self.channel = channel
     }
     
     required init?(coder: NSCoder) {
@@ -90,9 +94,8 @@ class MSGViewController: MessagesViewController {
         
         loadMessages()
         listenForNewMessages()
-        listenForReadStatusUpdates()
-        createTypingObserver()
-        
+//        listenForReadStatusUpdates()
+//        createTypingObserver()
         tabBarController?.tabBar.isHidden = true
         navigationItem.largeTitleDisplayMode = .never
     }
@@ -123,6 +126,7 @@ class MSGViewController: MessagesViewController {
     }
     
     private func configureMessageInputBar(){
+        messageInputBar.isHidden = channel.adminId != User.currentId
         messageInputBar.delegate = self
         
         let attachButton = InputBarButtonItem()
@@ -190,7 +194,7 @@ class MSGViewController: MessagesViewController {
     }
     
     private func insertMKMessage(localMessage: LocalMessage){
-        markMessageAsRead(localMessage)
+//        markMessageAsRead(localMessage)
         let incoming = Incoming(messageViewController: self)
         let mkMessage = incoming.createMKMessage(localMessage: localMessage)
         self.mkMessages.append(mkMessage)
@@ -238,13 +242,15 @@ class MSGViewController: MessagesViewController {
     func configureCustomTitle(){
         self.navigationItem.leftBarButtonItems = [UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonPressed))]
         
-        leftBarButtonView.addSubview(titleLabel)
-        leftBarButtonView.addSubview(subTitleLabel)
+//        leftBarButtonView.addSubview(titleLabel)
+//        leftBarButtonView.addSubview(subTitleLabel)
+//
+//        let leftBarButtinItem = UIBarButtonItem(customView: leftBarButtonView)
+//
+//        self.navigationItem.leftBarButtonItems?.append(leftBarButtinItem)
+//        titleLabel.text = recipientName
         
-        let leftBarButtinItem = UIBarButtonItem(customView: leftBarButtonView)
-        
-        self.navigationItem.leftBarButtonItems?.append(leftBarButtinItem)
-        titleLabel.text = recipientName
+        self.title = channel.name
     }
     
     @objc func backButtonPressed(){
@@ -255,34 +261,34 @@ class MSGViewController: MessagesViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    func updateTypingIndicator(_ show: Bool){
-        subTitleLabel.text = show ? "Typing..." : ""
-    }
-    
-    func startTypingIndicator(){
-        typingCounter += 1
-        FTypingListener.shared.saveTypingCounter(typing: true, chatRoomId: chatId)
-        
-        //Stop typing
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.stopTypingIndicator()
-        }
-    }
-    
-    func stopTypingIndicator(){
-        typingCounter -= 1
-        if typingCounter == 0 {
-            FTypingListener.shared.saveTypingCounter(typing: false, chatRoomId: chatId)
-        }
-    }
-    
-    func createTypingObserver(){
-        FTypingListener.shared.createTypingObserver(chatRoomId: chatId) { isTyping in
-            DispatchQueue.main.async {
-                self.updateTypingIndicator(isTyping)
-            }
-        }
-    }
+//    func updateTypingIndicator(_ show: Bool){
+//        subTitleLabel.text = show ? "Typing..." : ""
+//    }
+//
+//    func startTypingIndicator(){
+//        typingCounter += 1
+//        FTypingListener.shared.saveTypingCounter(typing: true, chatRoomId: chatId)
+//
+//        //Stop typing
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+//            self.stopTypingIndicator()
+//        }
+//    }
+//
+//    func stopTypingIndicator(){
+//        typingCounter -= 1
+//        if typingCounter == 0 {
+//            FTypingListener.shared.saveTypingCounter(typing: false, chatRoomId: chatId)
+//        }
+//    }
+//
+//    func createTypingObserver(){
+//        FTypingListener.shared.createTypingObserver(chatRoomId: chatId) { isTyping in
+//            DispatchQueue.main.async {
+//                self.updateTypingIndicator(isTyping)
+//            }
+//        }
+//    }
     
     private func markMessageAsRead(_ localMessage: LocalMessage){
         if localMessage.senderId != User.currentId {
@@ -290,27 +296,27 @@ class MSGViewController: MessagesViewController {
         }
     }
     
-    private func updateReadStatus(_ updatedLocalMessage: LocalMessage){
-        for index in 0 ..< mkMessages.count {
-            let tempMessage = mkMessages[index]
-            if updatedLocalMessage.id == tempMessage.messageId {
-                mkMessages[index].status = updatedLocalMessage.status
-                mkMessages[index].readDate = updatedLocalMessage.readDate
-                
-                RealmManager.shared.save(updatedLocalMessage)
-                
-                if mkMessages[index].status == kREAD {
-                    self.messagesCollectionView.reloadData()
-                }
-            }
-        }
-    }
-    
-    private func listenForReadStatusUpdates(){
-        FMessageListener.shared.listenForReadStatus(User.currentId, collectionId: chatId) { updatedMessage in
-            self.updateReadStatus(updatedMessage)
-        }
-    }
+//    private func updateReadStatus(_ updatedLocalMessage: LocalMessage){
+//        for index in 0 ..< mkMessages.count {
+//            let tempMessage = mkMessages[index]
+//            if updatedLocalMessage.id == tempMessage.messageId {
+//                mkMessages[index].status = updatedLocalMessage.status
+//                mkMessages[index].readDate = updatedLocalMessage.readDate
+//
+//                RealmManager.shared.save(updatedLocalMessage)
+//
+//                if mkMessages[index].status == kREAD {
+//                    self.messagesCollectionView.reloadData()
+//                }
+//            }
+//        }
+//    }
+//
+//    private func listenForReadStatusUpdates(){
+//        FMessageListener.shared.listenForReadStatus(User.currentId, collectionId: chatId) { updatedMessage in
+//            self.updateReadStatus(updatedMessage)
+//        }
+//    }
     
     private func configureGestureRecognizer(){
         longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(recoredAndSend))
@@ -354,14 +360,15 @@ class MSGViewController: MessagesViewController {
     }
     
     private func removeListeners(){
-        FTypingListener.shared.removeTypingListener()
+//        FTypingListener.shared.removeTypingListener()
         FMessageListener.shared.removeNewMessgaeListener()
     }
     
     // MARK: - Actions
     func send(text: String?, photo: UIImage?, video: Video?, audio: String?, location: String? , audioDuration: Float = 0.0){
         
-        Outgoing.sendMessage(chatId: chatId, text: text, photo: photo, video: video, audio: audio, audioDuration: audioDuration, location: location, memberIds: [User.currentId, recipientId])
+//        Outgoing.sendMessage(chatId: chatId, text: text, photo: photo, video: video, audio: audio, audioDuration: audioDuration, location: location, memberIds: [User.currentId, recipientId])
+        Outgoing.sendChannelMessage(channel: channel, text: text, photo: photo, video: video, audio: audio, location: location)
     }
     
     private func actionAttachMessage(){
@@ -412,7 +419,7 @@ class MSGViewController: MessagesViewController {
     
 }
 
-extension MSGViewController: GalleryControllerDelegate {
+extension ChannelMSGViewController: GalleryControllerDelegate {
     
     func galleryController(_ controller: GalleryController, didSelectImages images: [Image]) {
         // TODO: send photo image
@@ -439,3 +446,5 @@ extension MSGViewController: GalleryControllerDelegate {
     }
     
 }
+
+

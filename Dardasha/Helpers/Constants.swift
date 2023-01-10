@@ -8,10 +8,13 @@
 import Foundation
 import UIKit
 
+public let testEmail = "ahmedhlulu@icloud.com"
+public let testEmailPassword = "Aa123456"
+
 public let userDefaults = UserDefaults.standard
 public let kCURRENTUSER = "currentUser"
 
-public let kFILEREFERACE = "gs://dardasha-app-1f0f7.appspot.com/"
+public let kFILEREFERACE = "gs://dardashaapp-4300c.appspot.com/"
 
 public let kCHATROOMID = "chatRoomId"
 public let kSENDERID = "senderId"
@@ -31,3 +34,6 @@ public let kSTATUS = "status"
 public let kREADDATE = "readDate"
 
 public let kPLACEHOLDERMESSAGEIMAGE = UIImage()
+
+public let kADMINID = "adminId"
+public let kMEMBERIDS = "memberIds"

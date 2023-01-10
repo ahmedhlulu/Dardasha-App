@@ -13,6 +13,7 @@ enum FCollectionReference : String {
     case Chat
     case Message
     case Typing
+    case Channel
 }
 
 func FirestoreReference(_ collectionRef : FCollectionReference) -> CollectionReference {
