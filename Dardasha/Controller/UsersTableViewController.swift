@@ -17,6 +17,7 @@ class UsersTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.tableFooterView = UIView()
         downloadUsers()
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = true
