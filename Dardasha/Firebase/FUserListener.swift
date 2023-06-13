@@ -30,7 +30,7 @@ class FUserListener {
     
     
     // TODO: Register
-    func registerUserWith(email:String, password:String, completion: @escaping (_ error:Error?)-> Void) {
+    func registerUserWith(email:String, password:String, username:String, completion: @escaping (_ error:Error?)-> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { authResults, error in
             guard authResults != nil && error == nil else {
                 completion(error)
@@ -44,7 +44,7 @@ class FUserListener {
                 }
             }
             
-            let user = User(id: authResults!.user.uid, username: "username", email: email, pushId: "", avatarLink: "", status: "Hey, I'm Using Dardasha")
+            let user = User(id: authResults!.user.uid, username: username, email: email, pushId: "", avatarLink: "", status: "Hey, I'm Using Dardasha")
             
             self.saveUserToFirestore(user)
             saveUserLocally(user)

@@ -11,6 +11,7 @@ import ProgressHUD
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var usernameLbl: UILabel!
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var passwordLbl: UILabel!
     @IBOutlet weak var confermPassLbl: UILabel!
@@ -21,6 +22,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var haveAccountBtn: UIButton!
     @IBOutlet weak var resendEmailBtn: UIButton!
     
+    
+    @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var confermPassTF: UITextField!
@@ -32,6 +35,7 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupOutlit(mode: isLogin)
         setupBackgroundTapped()
+        usernameTF.delegate = self
         emailTF.delegate = self
         passwordTF.delegate = self
         confermPassTF.delegate = self
@@ -76,6 +80,8 @@ class LoginViewController: UIViewController {
         if !mode {
             // Login View
             titleLbl.text = "Login"
+            usernameLbl.isHidden = true
+            usernameTF.isHidden = true
             confermPassLbl.isHidden = true
             confermPassTF.isHidden = true
             
@@ -88,6 +94,8 @@ class LoginViewController: UIViewController {
         }else {
             // Register View
             titleLbl.text = "Register"
+            usernameLbl.isHidden = false
+            usernameTF.isHidden = false
             confermPassLbl.isHidden = false
             confermPassTF.isHidden = false
             
@@ -114,7 +122,7 @@ class LoginViewController: UIViewController {
         case .login:
             return emailTF.text != "" && passwordTF.text != ""
         case .register:
-            return emailTF.text != "" && passwordTF.text != "" && confermPassTF.text != ""
+            return emailTF.text != "" && passwordTF.text != "" && confermPassTF.text != "" && usernameTF.text != ""
         case .forgetPassword:
             return emailTF.text != ""
         }
@@ -131,7 +139,7 @@ class LoginViewController: UIViewController {
     // MARK: - registerUser
     private func registerUser(){
         if passwordTF.text! == confermPassTF.text! {
-            FUserListener.shared.registerUserWith(email: emailTF.text!, password: passwordTF.text!) { error in
+            FUserListener.shared.registerUserWith(email: emailTF.text!, password: passwordTF.text!, username: usernameTF.text!.lowercased()) { error in
                 guard error == nil else {
                     ProgressHUD.showError(error!.localizedDescription)
                     return
@@ -198,8 +206,18 @@ extension LoginViewController : UITextFieldDelegate {
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
         
+        usernameLbl.text = usernameTF.hasText ? "Username" : " "
         emailLbl.text = emailTF.hasText ? "Email" : " "
         passwordLbl.text = passwordTF.hasText ? "Password" : " "
         confermPassLbl.text = confermPassTF.hasText ? "Confirm Password" : " "
     }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if string == " " {
+            ProgressHUD.showError("All Fields must not have space")
+            return false
+        }
+        return true
+    }
+    
 }

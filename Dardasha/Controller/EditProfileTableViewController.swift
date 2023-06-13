@@ -127,6 +127,19 @@ extension EditProfileTableViewController : UITextFieldDelegate {
         }
         return true
     }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == usernameTF {
+            if string == " " {
+                ProgressHUD.showError("Username must not have space")
+                return false
+            } else {
+                return true
+            }
+        }
+        return true
+    }
+    
 }
 
 extension EditProfileTableViewController : GalleryControllerDelegate {
