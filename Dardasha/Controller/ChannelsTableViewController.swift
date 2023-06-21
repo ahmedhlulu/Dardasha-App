@@ -19,16 +19,28 @@ class ChannelsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.tableFooterView = UIView()
-        downloadAllChannels()
-        downloadMyChannels()
-        downloadSubscribedChannels()
+        configureChannel()
         
         refreshControl = UIRefreshControl()
         tableView.refreshControl = refreshControl
+        
+        tableView.register(UINib(nibName: "ChannelTableViewCell", bundle: nil), forCellReuseIdentifier: "ChannelTableViewCell")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        configureChannel()
     }
 
     
     @IBAction func channelSegmentChanged(_ sender: UISegmentedControl) {
+        configureChannel()
+    }
+    
+    func configureChannel(){
+        downloadAllChannels()
+        downloadMyChannels()
+        downloadSubscribedChannels()
         tableView.reloadData()
     }
     

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseFirestore
 import RealmSwift
 
 func restartChat(chatRoomId: String, memberIds: [String]){

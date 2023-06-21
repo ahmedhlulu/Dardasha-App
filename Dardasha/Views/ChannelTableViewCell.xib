@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ChannelTableViewCell" rowHeight="80" id="J7a-21-SW4" customClass="ChannelTableViewCell" customModule="Dardasha" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J7a-21-SW4" id="tUi-pk-WWp">
+                <rect key="frame" x="0.0" y="0.0" width="383.66666666666669" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dtW-Y0-3Ig">
+                        <rect key="frame" x="20" y="11" width="60" height="58.666666666666671"/>
+                        <color key="tintColor" red="0.86274509799999999" green="0.85882352939999995" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="Ftf-NU-fzc"/>
+                            <constraint firstAttribute="height" constant="60" id="oP8-Hu-O9I"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channel Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWW-gk-fqv">
+                        <rect key="frame" x="88" y="11" width="267.66666666666669" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Channel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8w4-1R-tj1">
+                        <rect key="frame" x="88" y="34" width="267.66666666666669" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 Members" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFS-2G-naq">
+                        <rect key="frame" x="88" y="53" width="80" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16 April 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnI-ng-daL">
+                        <rect key="frame" x="279.66666666666669" y="53" width="84" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="nWW-gk-fqv" firstAttribute="leading" secondItem="dtW-Y0-3Ig" secondAttribute="trailing" constant="8" symbolic="YES" id="0l1-eX-JQM"/>
+                    <constraint firstItem="8w4-1R-tj1" firstAttribute="leading" secondItem="dtW-Y0-3Ig" secondAttribute="trailing" constant="8" symbolic="YES" id="8kh-nb-2Ap"/>
+                    <constraint firstItem="XFS-2G-naq" firstAttribute="leading" secondItem="dtW-Y0-3Ig" secondAttribute="trailing" constant="8" symbolic="YES" id="BWo-Ml-nUN"/>
+                    <constraint firstItem="dtW-Y0-3Ig" firstAttribute="centerY" secondItem="tUi-pk-WWp" secondAttribute="centerY" id="BgV-JK-wKW"/>
+                    <constraint firstItem="dtW-Y0-3Ig" firstAttribute="leading" secondItem="tUi-pk-WWp" secondAttribute="leading" constant="20" symbolic="YES" id="FwZ-x9-Mh2"/>
+                    <constraint firstItem="XFS-2G-naq" firstAttribute="top" secondItem="8w4-1R-tj1" secondAttribute="bottom" constant="2" id="Iq1-gv-GOT"/>
+                    <constraint firstAttribute="trailing" secondItem="dnI-ng-daL" secondAttribute="trailing" constant="20" symbolic="YES" id="JVR-W3-llj"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="8w4-1R-tj1" secondAttribute="trailing" constant="20" id="Nbt-6E-kfP"/>
+                    <constraint firstAttribute="bottom" secondItem="dnI-ng-daL" secondAttribute="bottom" constant="10" id="Sfd-Jk-Q42"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="nWW-gk-fqv" secondAttribute="trailing" constant="20" id="ZOi-IR-n9P"/>
+                    <constraint firstItem="nWW-gk-fqv" firstAttribute="top" secondItem="tUi-pk-WWp" secondAttribute="topMargin" id="eYX-qe-CVv"/>
+                    <constraint firstItem="8w4-1R-tj1" firstAttribute="top" secondItem="nWW-gk-fqv" secondAttribute="bottom" constant="2" id="zPJ-nq-cqv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" name="ColorCell"/>
+            <connections>
+                <outlet property="aboutChannelLbl" destination="8w4-1R-tj1" id="hMf-ve-WUO"/>
+                <outlet property="avatarImageView" destination="dtW-Y0-3Ig" id="zVd-zb-p0A"/>
+                <outlet property="channelNameLbl" destination="nWW-gk-fqv" id="u8l-X0-kU2"/>
+                <outlet property="dateLbl" destination="dnI-ng-daL" id="XQZ-JS-due"/>
+                <outlet property="membersLbl" destination="XFS-2G-naq" id="OoR-Dm-V6p"/>
+            </connections>
+            <point key="canvasLocation" x="310" y="20"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="person.circle.fill" catalog="system" width="128" height="123"/>
+        <namedColor name="ColorCell">
+            <color red="0.99599999189376831" green="0.99599999189376831" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

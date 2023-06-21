@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B7AFCA0C3CEC36BFDC391CB /* Pods_Dardasha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553D801FD41E31F155F22F37 /* Pods_Dardasha.framework */; };
+		C3B0DE6BCAB3392010D85815 /* Pods_Dardasha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C6CB441D7CF9DE01AC21F0 /* Pods_Dardasha.framework */; };
 		E208A0DD28CD9BFF00F2392D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E208A0DC28CD9BFF00F2392D /* AppDelegate.swift */; };
 		E208A0DF28CD9BFF00F2392D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E208A0DE28CD9BFF00F2392D /* SceneDelegate.swift */; };
 		E208A0E128CD9BFF00F2392D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E208A0E028CD9BFF00F2392D /* LoginViewController.swift */; };
 		E208A0E428CD9BFF00F2392D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E208A0E228CD9BFF00F2392D /* Main.storyboard */; };
 		E208A0E628CD9C0000F2392D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E208A0E528CD9C0000F2392D /* Assets.xcassets */; };
 		E208A0E928CD9C0000F2392D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E208A0E728CD9C0000F2392D /* LaunchScreen.storyboard */; };
+		E26B64F42A42C8570083EFD6 /* UsersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E26B64F22A42C8570083EFD6 /* UsersTableViewCell.xib */; };
+		E26B64FA2A42C86D0083EFD6 /* ChannelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E26B64F82A42C86D0083EFD6 /* ChannelTableViewCell.xib */; };
+		E26B64FE2A42C88E0083EFD6 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E26B64FC2A42C88E0083EFD6 /* ChatTableViewCell.xib */; };
 		E271D687296D2C1F00027900 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E271D686296D2C1F00027900 /* GoogleService-Info.plist */; };
 		E28B252028CDBDA900ABBD7E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B251F28CDBDA900ABBD7E /* User.swift */; };
 		E28B252528CDBE7000ABBD7E /* FCollectionRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B252428CDBE7000ABBD7E /* FCollectionRef.swift */; };
@@ -62,23 +65,12 @@
 		E2DB6E88296D18FF000A6552 /* ChannelMSGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6E87296D18FF000A6552 /* ChannelMSGViewController.swift */; };
 		E2DB6E8B296D27CF000A6552 /* MessagesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6E8A296D27CF000A6552 /* MessagesDataSource.swift */; };
 		E2E7253D28F845C20044D034 /* BasicAudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E7253C28F845C20044D034 /* BasicAudioController.swift */; };
-		E2F3745A29358C0E00EFCB19 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E2F3745929358C0E00EFCB19 /* FirebaseAnalytics */; };
-		E2F3745C29358C0E00EFCB19 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E2F3745B29358C0E00EFCB19 /* FirebaseAuth */; };
-		E2F3745E29358C0E00EFCB19 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E2F3745D29358C0E00EFCB19 /* FirebaseFirestore */; };
-		E2F3746029358C0E00EFCB19 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E2F3745F29358C0E00EFCB19 /* FirebaseFirestoreSwift */; };
-		E2F3746229358C0E00EFCB19 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = E2F3746129358C0E00EFCB19 /* FirebaseMessaging */; };
-		E2F3746429358C0E00EFCB19 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E2F3746329358C0E00EFCB19 /* FirebaseStorage */; };
-		E2F3746629358C0E00EFCB19 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E2F3746529358C0E00EFCB19 /* RealmSwift */; };
-		E2F3746829358C0E00EFCB19 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = E2F3746729358C0E00EFCB19 /* ProgressHUD */; };
-		E2F3746A29358C0E00EFCB19 /* SKPhotoBrowser in Frameworks */ = {isa = PBXBuildFile; productRef = E2F3746929358C0E00EFCB19 /* SKPhotoBrowser */; };
-		E2F3746C29358C0E00EFCB19 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = E2F3746B29358C0E00EFCB19 /* MessageKit */; };
-		E2F3746E29358C0E00EFCB19 /* InputBarAccessoryView in Frameworks */ = {isa = PBXBuildFile; productRef = E2F3746D29358C0E00EFCB19 /* InputBarAccessoryView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		54086D227B5034D2FC219099 /* Pods-Dardasha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dardasha.release.xcconfig"; path = "Target Support Files/Pods-Dardasha/Pods-Dardasha.release.xcconfig"; sourceTree = "<group>"; };
-		553D801FD41E31F155F22F37 /* Pods_Dardasha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dardasha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7270F24CFF2729998F820BD8 /* Pods-Dardasha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dardasha.debug.xcconfig"; path = "Target Support Files/Pods-Dardasha/Pods-Dardasha.debug.xcconfig"; sourceTree = "<group>"; };
+		57C6CB441D7CF9DE01AC21F0 /* Pods_Dardasha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dardasha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A85A34B387D067B0FD33EB8B /* Pods-Dardasha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dardasha.debug.xcconfig"; path = "Target Support Files/Pods-Dardasha/Pods-Dardasha.debug.xcconfig"; sourceTree = "<group>"; };
+		A9D469C6A4DC45E55EBF4C87 /* Pods-Dardasha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dardasha.release.xcconfig"; path = "Target Support Files/Pods-Dardasha/Pods-Dardasha.release.xcconfig"; sourceTree = "<group>"; };
 		E208A0D928CD9BFF00F2392D /* Dardasha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dardasha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E208A0DC28CD9BFF00F2392D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E208A0DE28CD9BFF00F2392D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +79,9 @@
 		E208A0E528CD9C0000F2392D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E208A0E828CD9C0000F2392D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E208A0EA28CD9C0000F2392D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E26B64F22A42C8570083EFD6 /* UsersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersTableViewCell.xib; sourceTree = "<group>"; };
+		E26B64F82A42C86D0083EFD6 /* ChannelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelTableViewCell.xib; sourceTree = "<group>"; };
+		E26B64FC2A42C88E0083EFD6 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
 		E271D686296D2C1F00027900 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E28B251F28CDBDA900ABBD7E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E28B252428CDBE7000ABBD7E /* FCollectionRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionRef.swift; sourceTree = "<group>"; };
@@ -195,18 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2F3745A29358C0E00EFCB19 /* FirebaseAnalytics in Frameworks */,
-				E2F3746829358C0E00EFCB19 /* ProgressHUD in Frameworks */,
-				E2F3745C29358C0E00EFCB19 /* FirebaseAuth in Frameworks */,
-				E2F3746E29358C0E00EFCB19 /* InputBarAccessoryView in Frameworks */,
-				E2F3746629358C0E00EFCB19 /* RealmSwift in Frameworks */,
-				E2F3746229358C0E00EFCB19 /* FirebaseMessaging in Frameworks */,
-				E2F3745E29358C0E00EFCB19 /* FirebaseFirestore in Frameworks */,
-				E2F3746029358C0E00EFCB19 /* FirebaseFirestoreSwift in Frameworks */,
-				E2F3746A29358C0E00EFCB19 /* SKPhotoBrowser in Frameworks */,
-				E2F3746429358C0E00EFCB19 /* FirebaseStorage in Frameworks */,
-				E2F3746C29358C0E00EFCB19 /* MessageKit in Frameworks */,
-				1B7AFCA0C3CEC36BFDC391CB /* Pods_Dardasha.framework in Frameworks */,
+				C3B0DE6BCAB3392010D85815 /* Pods_Dardasha.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,8 +200,8 @@
 		9AF81A48539C8F6BAFC49572 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7270F24CFF2729998F820BD8 /* Pods-Dardasha.debug.xcconfig */,
-				54086D227B5034D2FC219099 /* Pods-Dardasha.release.xcconfig */,
+				A85A34B387D067B0FD33EB8B /* Pods-Dardasha.debug.xcconfig */,
+				A9D469C6A4DC45E55EBF4C87 /* Pods-Dardasha.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -243,16 +227,29 @@
 		E208A0DB28CD9BFF00F2392D /* Dardasha */ = {
 			isa = PBXGroup;
 			children = (
+				E26B64E82A42C7F40083EFD6 /* Views */,
 				E28B252D28CDE51300ABBD7E /* Helpers */,
 				E28B252128CDBE0C00ABBD7E /* Model */,
 				E28B252228CDBE1E00ABBD7E /* Storyboard */,
 				E28B252328CDBE3600ABBD7E /* Controller */,
-				E2D3217828CF5204004B9518 /* CellControllers */,
 				E28B252C28CDE4D100ABBD7E /* Firebase */,
 				E208A0E528CD9C0000F2392D /* Assets.xcassets */,
 				E208A0EA28CD9C0000F2392D /* Info.plist */,
 			);
 			path = Dardasha;
+			sourceTree = "<group>";
+		};
+		E26B64E82A42C7F40083EFD6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E2D3217928CF522D004B9518 /* UsersTableViewCell.swift */,
+				E26B64F22A42C8570083EFD6 /* UsersTableViewCell.xib */,
+				E2DB6E7B296CDD73000A6552 /* ChannelTableViewCell.swift */,
+				E26B64F82A42C86D0083EFD6 /* ChannelTableViewCell.xib */,
+				E2D3218128CF6927004B9518 /* ChatTableViewCell.swift */,
+				E26B64FC2A42C88E0083EFD6 /* ChatTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E28B252128CDBE0C00ABBD7E /* Model */ = {
@@ -343,16 +340,6 @@
 			path = MediaMessages;
 			sourceTree = "<group>";
 		};
-		E2D3217828CF5204004B9518 /* CellControllers */ = {
-			isa = PBXGroup;
-			children = (
-				E2D3217928CF522D004B9518 /* UsersTableViewCell.swift */,
-				E2D3218128CF6927004B9518 /* ChatTableViewCell.swift */,
-				E2DB6E7B296CDD73000A6552 /* ChannelTableViewCell.swift */,
-			);
-			path = CellControllers;
-			sourceTree = "<group>";
-		};
 		E2D3218D28D052E5004B9518 /* MSGViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,7 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				E2F3746F29358D1900EFCB19 /* Sources */,
-				553D801FD41E31F155F22F37 /* Pods_Dardasha.framework */,
+				57C6CB441D7CF9DE01AC21F0 /* Pods_Dardasha.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -547,30 +534,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E208A0ED28CD9C0000F2392D /* Build configuration list for PBXNativeTarget "Dardasha" */;
 			buildPhases = (
-				1E011081B9493A5D9A3FEBD8 /* [CP] Check Pods Manifest.lock */,
+				86B2400CD262C75872BD874A /* [CP] Check Pods Manifest.lock */,
 				E208A0D528CD9BFF00F2392D /* Sources */,
 				E208A0D628CD9BFF00F2392D /* Frameworks */,
 				E208A0D728CD9BFF00F2392D /* Resources */,
-				3A89CD7D852B6A9B0332D146 /* [CP] Embed Pods Frameworks */,
+				D4856648C10E95F6D2CB26B7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Dardasha;
-			packageProductDependencies = (
-				E2F3745929358C0E00EFCB19 /* FirebaseAnalytics */,
-				E2F3745B29358C0E00EFCB19 /* FirebaseAuth */,
-				E2F3745D29358C0E00EFCB19 /* FirebaseFirestore */,
-				E2F3745F29358C0E00EFCB19 /* FirebaseFirestoreSwift */,
-				E2F3746129358C0E00EFCB19 /* FirebaseMessaging */,
-				E2F3746329358C0E00EFCB19 /* FirebaseStorage */,
-				E2F3746529358C0E00EFCB19 /* RealmSwift */,
-				E2F3746729358C0E00EFCB19 /* ProgressHUD */,
-				E2F3746929358C0E00EFCB19 /* SKPhotoBrowser */,
-				E2F3746B29358C0E00EFCB19 /* MessageKit */,
-				E2F3746D29358C0E00EFCB19 /* InputBarAccessoryView */,
-			);
 			productName = Dardasha;
 			productReference = E208A0D928CD9BFF00F2392D /* Dardasha.app */;
 			productType = "com.apple.product-type.application";
@@ -599,14 +573,6 @@
 				Base,
 			);
 			mainGroup = E208A0D028CD9BFF00F2392D;
-			packageReferences = (
-				E2F3743B29357EEB00EFCB19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				E2F37448293582D400EFCB19 /* XCRemoteSwiftPackageReference "realm-swift" */,
-				E2F3744B293583DC00EFCB19 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
-				E2F3744E2935847E00EFCB19 /* XCRemoteSwiftPackageReference "SKPhotoBrowser" */,
-				E2F374512935852600EFCB19 /* XCRemoteSwiftPackageReference "MessageKit" */,
-				E2F374542935854900EFCB19 /* XCRemoteSwiftPackageReference "InputBarAccessoryView" */,
-			);
 			productRefGroup = E208A0DA28CD9BFF00F2392D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -622,16 +588,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				E208A0E928CD9C0000F2392D /* LaunchScreen.storyboard in Resources */,
+				E26B64FA2A42C86D0083EFD6 /* ChannelTableViewCell.xib in Resources */,
 				E271D687296D2C1F00027900 /* GoogleService-Info.plist in Resources */,
 				E208A0E628CD9C0000F2392D /* Assets.xcassets in Resources */,
 				E208A0E428CD9BFF00F2392D /* Main.storyboard in Resources */,
+				E26B64FE2A42C88E0083EFD6 /* ChatTableViewCell.xib in Resources */,
+				E26B64F42A42C8570083EFD6 /* UsersTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1E011081B9493A5D9A3FEBD8 /* [CP] Check Pods Manifest.lock */ = {
+		86B2400CD262C75872BD874A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -653,7 +622,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3A89CD7D852B6A9B0332D146 /* [CP] Embed Pods Frameworks */ = {
+		D4856648C10E95F6D2CB26B7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -868,7 +837,7 @@
 		};
 		E208A0EE28CD9C0000F2392D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7270F24CFF2729998F820BD8 /* Pods-Dardasha.debug.xcconfig */;
+			baseConfigurationReference = A85A34B387D067B0FD33EB8B /* Pods-Dardasha.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -905,7 +874,7 @@
 		};
 		E208A0EF28CD9C0000F2392D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 54086D227B5034D2FC219099 /* Pods-Dardasha.release.xcconfig */;
+			baseConfigurationReference = A9D469C6A4DC45E55EBF4C87 /* Pods-Dardasha.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -962,115 +931,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		E2F3743B29357EEB00EFCB19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
-		E2F37448293582D400EFCB19 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.0.0;
-			};
-		};
-		E2F3744B293583DC00EFCB19 /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/relatedcode/ProgressHUD";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 13.0.0;
-			};
-		};
-		E2F3744E2935847E00EFCB19 /* XCRemoteSwiftPackageReference "SKPhotoBrowser" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/suzuki-0000/SKPhotoBrowser";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.0.0;
-			};
-		};
-		E2F374512935852600EFCB19 /* XCRemoteSwiftPackageReference "MessageKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/MessageKit/MessageKit";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
-		E2F374542935854900EFCB19 /* XCRemoteSwiftPackageReference "InputBarAccessoryView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/nathantannar4/InputBarAccessoryView";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		E2F3745929358C0E00EFCB19 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E2F3743B29357EEB00EFCB19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		E2F3745B29358C0E00EFCB19 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E2F3743B29357EEB00EFCB19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		E2F3745D29358C0E00EFCB19 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E2F3743B29357EEB00EFCB19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-		E2F3745F29358C0E00EFCB19 /* FirebaseFirestoreSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E2F3743B29357EEB00EFCB19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestoreSwift;
-		};
-		E2F3746129358C0E00EFCB19 /* FirebaseMessaging */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E2F3743B29357EEB00EFCB19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseMessaging;
-		};
-		E2F3746329358C0E00EFCB19 /* FirebaseStorage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E2F3743B29357EEB00EFCB19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseStorage;
-		};
-		E2F3746529358C0E00EFCB19 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E2F37448293582D400EFCB19 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
-		};
-		E2F3746729358C0E00EFCB19 /* ProgressHUD */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E2F3744B293583DC00EFCB19 /* XCRemoteSwiftPackageReference "ProgressHUD" */;
-			productName = ProgressHUD;
-		};
-		E2F3746929358C0E00EFCB19 /* SKPhotoBrowser */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E2F3744E2935847E00EFCB19 /* XCRemoteSwiftPackageReference "SKPhotoBrowser" */;
-			productName = SKPhotoBrowser;
-		};
-		E2F3746B29358C0E00EFCB19 /* MessageKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E2F374512935852600EFCB19 /* XCRemoteSwiftPackageReference "MessageKit" */;
-			productName = MessageKit;
-		};
-		E2F3746D29358C0E00EFCB19 /* InputBarAccessoryView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E2F374542935854900EFCB19 /* XCRemoteSwiftPackageReference "InputBarAccessoryView" */;
-			productName = InputBarAccessoryView;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E208A0D128CD9BFF00F2392D /* Project object */;
 }

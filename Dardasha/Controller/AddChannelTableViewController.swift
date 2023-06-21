@@ -14,6 +14,7 @@ class AddChannelTableViewController: UITableViewController {
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var aboutTextView: UITextView!
+    @IBOutlet weak var deleteChannel: UIButton!
     
     var channelId = UUID().uuidString
     var gallary: GalleryController!
@@ -31,6 +32,7 @@ class AddChannelTableViewController: UITableViewController {
         configureBackButtonItem()
         avatarImageView.image = UIImage(systemName: "person.circle.fill")
         avatarImageView.makeRounded()
+        self.deleteChannel.isHidden = true
         configuredEditView()
     }
     
@@ -41,6 +43,20 @@ class AddChannelTableViewController: UITableViewController {
             ProgressHUD.showError("Channel name is required")
         }
     }
+    
+    
+    @IBAction func deleteChannelClicked(_ sender: Any) {
+        guard channelToEdit != nil else {return}
+        FChannelListener.shared.deleteChannel(channel: channelToEdit!) { error in
+            guard error == nil else {
+                ProgressHUD.showError(error!)
+                return
+            }
+            ProgressHUD.showSuccess("Channel Deleted")
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
     
     
     private func configureGestures(){
@@ -92,12 +108,13 @@ class AddChannelTableViewController: UITableViewController {
     // MARK: - configure edit view
     private func configuredEditView(){
         guard channelToEdit != nil else {return}
-        
+        self.deleteChannel.isHidden = false
         self.nameTF.text = channelToEdit!.name
         self.channelId = channelToEdit!.id
         self.aboutTextView.text = channelToEdit!.aboutChannel
         self.avatarLink = channelToEdit!.avatarLink
-        self.title = "Editing (\(channelToEdit!.name))"
+        self.title = "Editing (\(channelToEdit!.name) Channel)"
+        
         
         if channelToEdit!.avatarLink != "" {
             FileStorage.downloadImage(imageUrl: avatarLink) { image in

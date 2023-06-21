@@ -25,6 +25,7 @@ class ChatsTableViewController: UITableViewController {
         definesPresentationContext = true
         searchController.searchResultsUpdater = self
         
+        tableView.register(UINib(nibName: "ChatTableViewCell", bundle: nil), forCellReuseIdentifier: "ChatTableViewCell")
     }
     
     

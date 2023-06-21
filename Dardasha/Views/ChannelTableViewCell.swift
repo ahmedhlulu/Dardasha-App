@@ -41,6 +41,8 @@ class ChannelTableViewCell: UITableViewCell {
                     }
                 }
             }
+        }else{
+            avatarImageView.image = UIImage(systemName: "person.circle.fill")
         }
     }
 

@@ -6,8 +6,7 @@
 //
 
 import Foundation
-import FirebaseFirestoreSwift
-import Firebase
+import FirebaseAuth
 
 struct User : Codable, Equatable {
     var id = ""

@@ -28,6 +28,8 @@ class UsersTableViewController: UITableViewController {
         
         self.refreshControl = UIRefreshControl()
         self.tableView.refreshControl = self.refreshControl
+        
+        tableView.register(UINib(nibName: "UsersTableViewCell", bundle: nil), forCellReuseIdentifier: "UsersTableViewCell")
     }
     
     // MARK: - Func

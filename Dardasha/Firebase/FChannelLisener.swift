@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseFirestore
 
 class FChannelListener {
     
@@ -74,6 +74,19 @@ class FChannelListener {
         }
     }
     
+    
+    // MARK: - Delete Channel
+    func deleteChannel(channel: Channel, completion: @escaping(_ error: String?) -> Void){
+        
+        if channel.adminId == User.currentId {
+            FirestoreReference(.Channel).document(channel.id).delete { error in
+                guard let error = error else { return }
+                print(error.localizedDescription)
+                completion(error.localizedDescription)
+            }
+            completion(nil)
+        }
+    }
     
     // MARK: - Helper func
     func removeUserChannels(_ allChannels: [Channel]) -> [Channel] {

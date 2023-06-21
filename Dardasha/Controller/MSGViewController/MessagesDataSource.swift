@@ -10,9 +10,13 @@ import MessageKit
 import UIKit
 
 extension MSGViewController: MessagesDataSource {
-    var currentSender: MessageKit.SenderType {
+    func currentSender() -> MessageKit.SenderType {
         return currentUser
     }
+    
+//    var currentSender: MessageKit.SenderType {
+//        return currentUser
+//    }
     
     
     func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {
@@ -61,9 +65,13 @@ extension MSGViewController: MessagesDataSource {
 
 // MARK: - Channel
 extension ChannelMSGViewController: MessagesDataSource {
-    var currentSender: MessageKit.SenderType {
+    func currentSender() -> MessageKit.SenderType {
         return currentUser
     }
+    
+//    var currentSender: MessageKit.SenderType {
+//        return currentUser
+//    }
     
     
     func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {

@@ -121,7 +121,7 @@ class ChannelMSGViewController: MessagesViewController {
         messagesCollectionView.messagesLayoutDelegate = self
         
         scrollsToLastItemOnKeyboardBeginsEditing = true
-        maintainPositionOnInputBarHeightChanged = true
+//        maintainPositionOnInputBarHeightChanged = true
         messagesCollectionView.refreshControl = refreshController
     }
     
