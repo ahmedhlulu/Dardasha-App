@@ -17,8 +17,8 @@ class TVExtenstion : UITextView {
     }
     
     func makeRound(){
-        self.layer.borderWidth = CGFloat(2)
-        self.layer.cornerRadius = 20
+        self.layer.borderWidth = CGFloat(1.2)
+        self.layer.cornerRadius = 12
         
     }
     

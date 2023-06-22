@@ -44,7 +44,7 @@ class FUserListener {
                 }
             }
             
-            let user = User(id: authResults!.user.uid, username: username, email: email, pushId: "\(Date().timeIntervalSince1970)", avatarLink: "", status: "Hey, I'm Using HiLo")
+            let user = User(id: authResults!.user.uid, username: username, email: email, memberDate: Date(), avatarLink: "", status: "Welcome, I'm \(username)")
             
             self.saveUserToFirestore(user)
             saveUserLocally(user)

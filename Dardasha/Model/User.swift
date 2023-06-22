@@ -7,12 +7,13 @@
 
 import Foundation
 import FirebaseAuth
+import FirebaseFirestoreSwift
 
 struct User : Codable, Equatable {
     var id = ""
     var username : String
     var email : String
-    var pushId = ""
+    @ServerTimestamp var memberDate = Date()
     var avatarLink = ""
     var status : String
     
@@ -116,7 +117,7 @@ func saveUserLocally(_ user : User){
 //            }
 //            FileStorage.uploadImage(image, directory: fileDirectory) { photoLink in
 //
-//                let user = User(id: id, username: names[i], email: "user\(userIndex)@gmail.com", pushId: "\(Date().timeIntervalSince1970)", avatarLink: photoLink ?? "", status: about[i])
+//                let user = User(id: id, username: names[i], email: "user\(userIndex)@gmail.com", memberDate: Date(), avatarLink: photoLink ?? "", status: about[i])
 //
 //                userIndex += 1
 //                FUserListener.shared.saveUserToFirestore(user)
@@ -130,7 +131,8 @@ func saveUserLocally(_ user : User){
 //    }
 //}
 //
-//func createDummyChats(){
+
+//func createDummyChannels(){
 //
 //    let names = [
 //                 "Paris Aguirre",

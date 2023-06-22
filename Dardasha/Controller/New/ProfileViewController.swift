@@ -82,12 +82,11 @@ class ProfileViewController: UIViewController {
             configureBackButtonItem()
             usernameLbl.text = user.username
             statusLbl.text = user.status
+            memberDateLbl.text = timeElapsed(user.memberDate ?? Date())
             
             emailTitleLbl.isHidden = true
             emailLbl.isHidden = true
             memberDateTitleLbl.isHidden = true
-            memberDateLbl.isHidden = true
-            logoutBtn.isHidden = true
             editProfileBtn.setTitle("Start Chat", for: .normal)
             
             if user.avatarLink != "" {
@@ -101,7 +100,7 @@ class ProfileViewController: UIViewController {
                 usernameLbl.text = user.username
                 statusLbl.text = user.status
                 emailLbl.text = user.email
-                memberDateLbl.text = user.pushId
+                memberDateLbl.text = timeElapsed(user.memberDate ?? Date())
                 
                 emailTitleLbl.isHidden = false
                 emailLbl.isHidden = false
