@@ -44,7 +44,7 @@ class FUserListener {
                 }
             }
             
-            let user = User(id: authResults!.user.uid, username: username, email: email, pushId: "", avatarLink: "", status: "Hey, I'm Using Dardasha")
+            let user = User(id: authResults!.user.uid, username: username, email: email, pushId: "\(Date().timeIntervalSince1970)", avatarLink: "", status: "Hey, I'm Using HiLo")
             
             self.saveUserToFirestore(user)
             saveUserLocally(user)
@@ -117,7 +117,7 @@ class FUserListener {
         var count = 0
         var userArray = [User]()
         
-        for userId in withIds {
+        withIds.forEach { userId in
             FirestoreReference(.User).document(userId).getDocument { documentSnapshot, error in
                 guard let document = documentSnapshot else {return}
                 let user = try? document.data(as: User.self)

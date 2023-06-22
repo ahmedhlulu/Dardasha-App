@@ -10,23 +10,37 @@
 		C3B0DE6BCAB3392010D85815 /* Pods_Dardasha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C6CB441D7CF9DE01AC21F0 /* Pods_Dardasha.framework */; };
 		E208A0DD28CD9BFF00F2392D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E208A0DC28CD9BFF00F2392D /* AppDelegate.swift */; };
 		E208A0DF28CD9BFF00F2392D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E208A0DE28CD9BFF00F2392D /* SceneDelegate.swift */; };
-		E208A0E128CD9BFF00F2392D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E208A0E028CD9BFF00F2392D /* LoginViewController.swift */; };
 		E208A0E428CD9BFF00F2392D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E208A0E228CD9BFF00F2392D /* Main.storyboard */; };
 		E208A0E628CD9C0000F2392D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E208A0E528CD9C0000F2392D /* Assets.xcassets */; };
 		E208A0E928CD9C0000F2392D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E208A0E728CD9C0000F2392D /* LaunchScreen.storyboard */; };
+		E234B8672A43FC76007B5B54 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234B8662A43FC76007B5B54 /* GroupsViewController.swift */; };
+		E234B8712A440424007B5B54 /* MyChannelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234B86F2A440424007B5B54 /* MyChannelCollectionViewCell.swift */; };
+		E234B8722A440424007B5B54 /* MyChannelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E234B8702A440424007B5B54 /* MyChannelCollectionViewCell.xib */; };
+		E234B8782A441495007B5B54 /* CreateChannelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234B8762A441494007B5B54 /* CreateChannelCollectionViewCell.swift */; };
+		E234B8792A441495007B5B54 /* CreateChannelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E234B8772A441495007B5B54 /* CreateChannelCollectionViewCell.xib */; };
+		E234B87C2A441AC8007B5B54 /* FollowGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234B87B2A441AC8007B5B54 /* FollowGroupViewController.swift */; };
+		E234B87E2A44276C007B5B54 /* AboutGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234B87D2A44276C007B5B54 /* AboutGroupViewController.swift */; };
+		E234B8812A443C8D007B5B54 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234B8802A443C8D007B5B54 /* CreateGroupViewController.swift */; };
+		E234B8832A44576D007B5B54 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234B8822A44576D007B5B54 /* UsersViewController.swift */; };
+		E234B8852A445EB8007B5B54 /* TFExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234B8842A445EB8007B5B54 /* TFExtenstion.swift */; };
+		E234B8872A4460C7007B5B54 /* TVExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234B8862A4460C7007B5B54 /* TVExtenstion.swift */; };
+		E234B88A2A447217007B5B54 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234B8882A447216007B5B54 /* LoginViewController.swift */; };
+		E234B88B2A447217007B5B54 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234B8892A447217007B5B54 /* RegisterViewController.swift */; };
 		E26B64F42A42C8570083EFD6 /* UsersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E26B64F22A42C8570083EFD6 /* UsersTableViewCell.xib */; };
 		E26B64FA2A42C86D0083EFD6 /* ChannelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E26B64F82A42C86D0083EFD6 /* ChannelTableViewCell.xib */; };
 		E26B64FE2A42C88E0083EFD6 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E26B64FC2A42C88E0083EFD6 /* ChatTableViewCell.xib */; };
+		E26B65022A42F5CE0083EFD6 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26B65012A42F5CE0083EFD6 /* ChatsViewController.swift */; };
 		E271D687296D2C1F00027900 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E271D686296D2C1F00027900 /* GoogleService-Info.plist */; };
 		E28B252028CDBDA900ABBD7E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B251F28CDBDA900ABBD7E /* User.swift */; };
 		E28B252528CDBE7000ABBD7E /* FCollectionRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B252428CDBE7000ABBD7E /* FCollectionRef.swift */; };
 		E28B252728CDBF4D00ABBD7E /* FUserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B252628CDBF4D00ABBD7E /* FUserListener.swift */; };
 		E28B252928CDC51100ABBD7E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B252828CDC51100ABBD7E /* Constants.swift */; };
-		E28B252B28CDDE8300ABBD7E /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B252A28CDDE8300ABBD7E /* SettingTableViewController.swift */; };
-		E28B252F28CDE97500ABBD7E /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B252E28CDE97500ABBD7E /* EditProfileTableViewController.swift */; };
 		E28B253128CDF5EB00ABBD7E /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B253028CDF5EB00ABBD7E /* FileStorage.swift */; };
 		E28B253328CDFF4000ABBD7E /* GlobalFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B253228CDFF4000ABBD7E /* GlobalFunc.swift */; };
 		E28B253528CE055300ABBD7E /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B253428CE055300ABBD7E /* Extenstions.swift */; };
+		E2987E232A4301F1005E52E8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2987E222A4301F1005E52E8 /* HomeView.swift */; };
+		E2987E272A4306F3005E52E8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2987E262A4306F3005E52E8 /* ProfileViewController.swift */; };
+		E2987E292A4306FB005E52E8 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2987E282A4306FB005E52E8 /* EditProfileViewController.swift */; };
 		E2C164AE28F8236A00BF30BF /* VideoMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C164AD28F8236A00BF30BF /* VideoMessage.swift */; };
 		E2C164B128F82C5500BF30BF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C164B028F82C5500BF30BF /* LocationManager.swift */; };
 		E2C164B328F8311900BF30BF /* LocationMessgae.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C164B228F8311900BF30BF /* LocationMessgae.swift */; };
@@ -35,11 +49,8 @@
 		E2C164B928F8365400BF30BF /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C164B828F8365400BF30BF /* AudioRecorder.swift */; };
 		E2C164BB28F8418200BF30BF /* AudioMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C164BA28F8418200BF30BF /* AudioMessage.swift */; };
 		E2D3217A28CF522D004B9518 /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3217928CF522D004B9518 /* UsersTableViewCell.swift */; };
-		E2D3217C28CF5247004B9518 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3217B28CF5247004B9518 /* UsersTableViewController.swift */; };
-		E2D3217E28CF61DE004B9518 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3217D28CF61DE004B9518 /* ProfileTableViewController.swift */; };
 		E2D3218028CF6647004B9518 /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3217F28CF6647004B9518 /* ChatRoom.swift */; };
 		E2D3218228CF6927004B9518 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3218128CF6927004B9518 /* ChatTableViewCell.swift */; };
-		E2D3218428CF695A004B9518 /* ChatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3218328CF695A004B9518 /* ChatsTableViewController.swift */; };
 		E2D3218628CF70A6004B9518 /* StartChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3218528CF70A6004B9518 /* StartChat.swift */; };
 		E2D3218828CF7614004B9518 /* FChatRoomListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3218728CF7614004B9518 /* FChatRoomListener.swift */; };
 		E2D3218A28D041CE004B9518 /* MSGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3218928D041CE004B9518 /* MSGViewController.swift */; };
@@ -57,11 +68,8 @@
 		E2D321A528D1CCB3004B9518 /* FTypingListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D321A428D1CCB3004B9518 /* FTypingListener.swift */; };
 		E2D321A728D34A5E004B9518 /* PhotoMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D321A628D34A5E004B9518 /* PhotoMessage.swift */; };
 		E2DB6E7C296CDD73000A6552 /* ChannelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6E7B296CDD73000A6552 /* ChannelTableViewCell.swift */; };
-		E2DB6E7E296CDEE2000A6552 /* ChannelsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6E7D296CDEE2000A6552 /* ChannelsTableViewController.swift */; };
 		E2DB6E80296CE08B000A6552 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6E7F296CE08B000A6552 /* Channel.swift */; };
-		E2DB6E82296CEFE1000A6552 /* AddChannelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6E81296CEFE1000A6552 /* AddChannelTableViewController.swift */; };
 		E2DB6E84296CF652000A6552 /* FChannelLisener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6E83296CF652000A6552 /* FChannelLisener.swift */; };
-		E2DB6E86296D08F8000A6552 /* ChannelFollowTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6E85296D08F8000A6552 /* ChannelFollowTableViewController.swift */; };
 		E2DB6E88296D18FF000A6552 /* ChannelMSGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6E87296D18FF000A6552 /* ChannelMSGViewController.swift */; };
 		E2DB6E8B296D27CF000A6552 /* MessagesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6E8A296D27CF000A6552 /* MessagesDataSource.swift */; };
 		E2E7253D28F845C20044D034 /* BasicAudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E7253C28F845C20044D034 /* BasicAudioController.swift */; };
@@ -74,24 +82,38 @@
 		E208A0D928CD9BFF00F2392D /* Dardasha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dardasha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E208A0DC28CD9BFF00F2392D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E208A0DE28CD9BFF00F2392D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E208A0E028CD9BFF00F2392D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E208A0E328CD9BFF00F2392D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E208A0E528CD9C0000F2392D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E208A0E828CD9C0000F2392D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E208A0EA28CD9C0000F2392D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E234B8662A43FC76007B5B54 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
+		E234B86F2A440424007B5B54 /* MyChannelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChannelCollectionViewCell.swift; sourceTree = "<group>"; };
+		E234B8702A440424007B5B54 /* MyChannelCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyChannelCollectionViewCell.xib; sourceTree = "<group>"; };
+		E234B8762A441494007B5B54 /* CreateChannelCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateChannelCollectionViewCell.swift; sourceTree = "<group>"; };
+		E234B8772A441495007B5B54 /* CreateChannelCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateChannelCollectionViewCell.xib; sourceTree = "<group>"; };
+		E234B87B2A441AC8007B5B54 /* FollowGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowGroupViewController.swift; sourceTree = "<group>"; };
+		E234B87D2A44276C007B5B54 /* AboutGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutGroupViewController.swift; sourceTree = "<group>"; };
+		E234B8802A443C8D007B5B54 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
+		E234B8822A44576D007B5B54 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		E234B8842A445EB8007B5B54 /* TFExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFExtenstion.swift; sourceTree = "<group>"; };
+		E234B8862A4460C7007B5B54 /* TVExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVExtenstion.swift; sourceTree = "<group>"; };
+		E234B8882A447216007B5B54 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E234B8892A447217007B5B54 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		E26B64F22A42C8570083EFD6 /* UsersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersTableViewCell.xib; sourceTree = "<group>"; };
 		E26B64F82A42C86D0083EFD6 /* ChannelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelTableViewCell.xib; sourceTree = "<group>"; };
 		E26B64FC2A42C88E0083EFD6 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
+		E26B65012A42F5CE0083EFD6 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
 		E271D686296D2C1F00027900 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E28B251F28CDBDA900ABBD7E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E28B252428CDBE7000ABBD7E /* FCollectionRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionRef.swift; sourceTree = "<group>"; };
 		E28B252628CDBF4D00ABBD7E /* FUserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FUserListener.swift; sourceTree = "<group>"; };
 		E28B252828CDC51100ABBD7E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		E28B252A28CDDE8300ABBD7E /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
-		E28B252E28CDE97500ABBD7E /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		E28B253028CDF5EB00ABBD7E /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
 		E28B253228CDFF4000ABBD7E /* GlobalFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunc.swift; sourceTree = "<group>"; };
 		E28B253428CE055300ABBD7E /* Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
+		E2987E222A4301F1005E52E8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E2987E262A4306F3005E52E8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E2987E282A4306FB005E52E8 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		E2C164AD28F8236A00BF30BF /* VideoMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoMessage.swift; sourceTree = "<group>"; };
 		E2C164B028F82C5500BF30BF /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		E2C164B228F8311900BF30BF /* LocationMessgae.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMessgae.swift; sourceTree = "<group>"; };
@@ -100,11 +122,8 @@
 		E2C164B828F8365400BF30BF /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 		E2C164BA28F8418200BF30BF /* AudioMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMessage.swift; sourceTree = "<group>"; };
 		E2D3217928CF522D004B9518 /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
-		E2D3217B28CF5247004B9518 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
-		E2D3217D28CF61DE004B9518 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		E2D3217F28CF6647004B9518 /* ChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
 		E2D3218128CF6927004B9518 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
-		E2D3218328CF695A004B9518 /* ChatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewController.swift; sourceTree = "<group>"; };
 		E2D3218528CF70A6004B9518 /* StartChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartChat.swift; sourceTree = "<group>"; };
 		E2D3218728CF7614004B9518 /* FChatRoomListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FChatRoomListener.swift; sourceTree = "<group>"; };
 		E2D3218928D041CE004B9518 /* MSGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSGViewController.swift; sourceTree = "<group>"; };
@@ -122,11 +141,8 @@
 		E2D321A428D1CCB3004B9518 /* FTypingListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTypingListener.swift; sourceTree = "<group>"; };
 		E2D321A628D34A5E004B9518 /* PhotoMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMessage.swift; sourceTree = "<group>"; };
 		E2DB6E7B296CDD73000A6552 /* ChannelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableViewCell.swift; sourceTree = "<group>"; };
-		E2DB6E7D296CDEE2000A6552 /* ChannelsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsTableViewController.swift; sourceTree = "<group>"; };
 		E2DB6E7F296CE08B000A6552 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
-		E2DB6E81296CEFE1000A6552 /* AddChannelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelTableViewController.swift; sourceTree = "<group>"; };
 		E2DB6E83296CF652000A6552 /* FChannelLisener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FChannelLisener.swift; sourceTree = "<group>"; };
-		E2DB6E85296D08F8000A6552 /* ChannelFollowTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelFollowTableViewController.swift; sourceTree = "<group>"; };
 		E2DB6E87296D18FF000A6552 /* ChannelMSGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelMSGViewController.swift; sourceTree = "<group>"; };
 		E2DB6E8A296D27CF000A6552 /* MessagesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesDataSource.swift; sourceTree = "<group>"; };
 		E2E7253C28F845C20044D034 /* BasicAudioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAudioController.swift; sourceTree = "<group>"; };
@@ -239,15 +255,44 @@
 			path = Dardasha;
 			sourceTree = "<group>";
 		};
+		E234B87A2A441A3F007B5B54 /* New */ = {
+			isa = PBXGroup;
+			children = (
+				E234B8882A447216007B5B54 /* LoginViewController.swift */,
+				E234B8892A447217007B5B54 /* RegisterViewController.swift */,
+				E26B65012A42F5CE0083EFD6 /* ChatsViewController.swift */,
+				E2987E262A4306F3005E52E8 /* ProfileViewController.swift */,
+				E2987E282A4306FB005E52E8 /* EditProfileViewController.swift */,
+				E234B87F2A443C70007B5B54 /* Group */,
+				E234B8822A44576D007B5B54 /* UsersViewController.swift */,
+			);
+			path = New;
+			sourceTree = "<group>";
+		};
+		E234B87F2A443C70007B5B54 /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				E234B8662A43FC76007B5B54 /* GroupsViewController.swift */,
+				E234B87B2A441AC8007B5B54 /* FollowGroupViewController.swift */,
+				E234B87D2A44276C007B5B54 /* AboutGroupViewController.swift */,
+				E234B8802A443C8D007B5B54 /* CreateGroupViewController.swift */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
 		E26B64E82A42C7F40083EFD6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				E2D3217928CF522D004B9518 /* UsersTableViewCell.swift */,
 				E26B64F22A42C8570083EFD6 /* UsersTableViewCell.xib */,
-				E2DB6E7B296CDD73000A6552 /* ChannelTableViewCell.swift */,
-				E26B64F82A42C86D0083EFD6 /* ChannelTableViewCell.xib */,
 				E2D3218128CF6927004B9518 /* ChatTableViewCell.swift */,
 				E26B64FC2A42C88E0083EFD6 /* ChatTableViewCell.xib */,
+				E2DB6E7B296CDD73000A6552 /* ChannelTableViewCell.swift */,
+				E26B64F82A42C86D0083EFD6 /* ChannelTableViewCell.xib */,
+				E234B86F2A440424007B5B54 /* MyChannelCollectionViewCell.swift */,
+				E234B8702A440424007B5B54 /* MyChannelCollectionViewCell.xib */,
+				E234B8762A441494007B5B54 /* CreateChannelCollectionViewCell.swift */,
+				E234B8772A441495007B5B54 /* CreateChannelCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -287,18 +332,10 @@
 			children = (
 				E208A0DC28CD9BFF00F2392D /* AppDelegate.swift */,
 				E208A0DE28CD9BFF00F2392D /* SceneDelegate.swift */,
-				E208A0E028CD9BFF00F2392D /* LoginViewController.swift */,
-				E28B252A28CDDE8300ABBD7E /* SettingTableViewController.swift */,
-				E28B252E28CDE97500ABBD7E /* EditProfileTableViewController.swift */,
-				E2D3217B28CF5247004B9518 /* UsersTableViewController.swift */,
-				E2D3217D28CF61DE004B9518 /* ProfileTableViewController.swift */,
-				E2D3218328CF695A004B9518 /* ChatsTableViewController.swift */,
-				E2C164B428F832CA00BF30BF /* MapViewController.swift */,
+				E234B87A2A441A3F007B5B54 /* New */,
 				E2D3218D28D052E5004B9518 /* MSGViewController */,
-				E2DB6E7D296CDEE2000A6552 /* ChannelsTableViewController.swift */,
-				E2DB6E81296CEFE1000A6552 /* AddChannelTableViewController.swift */,
-				E2DB6E85296D08F8000A6552 /* ChannelFollowTableViewController.swift */,
 				E2DB6E87296D18FF000A6552 /* ChannelMSGViewController.swift */,
+				E2C164B428F832CA00BF30BF /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -325,6 +362,9 @@
 				E28B253228CDFF4000ABBD7E /* GlobalFunc.swift */,
 				E28B253428CE055300ABBD7E /* Extenstions.swift */,
 				E2D3218528CF70A6004B9518 /* StartChat.swift */,
+				E2987E222A4301F1005E52E8 /* HomeView.swift */,
+				E234B8842A445EB8007B5B54 /* TFExtenstion.swift */,
+				E234B8862A4460C7007B5B54 /* TVExtenstion.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -591,8 +631,10 @@
 				E26B64FA2A42C86D0083EFD6 /* ChannelTableViewCell.xib in Resources */,
 				E271D687296D2C1F00027900 /* GoogleService-Info.plist in Resources */,
 				E208A0E628CD9C0000F2392D /* Assets.xcassets in Resources */,
+				E234B8792A441495007B5B54 /* CreateChannelCollectionViewCell.xib in Resources */,
 				E208A0E428CD9BFF00F2392D /* Main.storyboard in Resources */,
 				E26B64FE2A42C88E0083EFD6 /* ChatTableViewCell.xib in Resources */,
+				E234B8722A440424007B5B54 /* MyChannelCollectionViewCell.xib in Resources */,
 				E26B64F42A42C8570083EFD6 /* UsersTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -648,52 +690,58 @@
 			files = (
 				E2C164B328F8311900BF30BF /* LocationMessgae.swift in Sources */,
 				E2DB6E84296CF652000A6552 /* FChannelLisener.swift in Sources */,
-				E28B252B28CDDE8300ABBD7E /* SettingTableViewController.swift in Sources */,
 				E2D321A328D06A1D004B9518 /* Incoming.swift in Sources */,
 				E2DB6E88296D18FF000A6552 /* ChannelMSGViewController.swift in Sources */,
-				E2DB6E86296D08F8000A6552 /* ChannelFollowTableViewController.swift in Sources */,
 				E2D3219728D05398004B9518 /* InputBarAccessoryViewDelegate.swift in Sources */,
 				E2C164B928F8365400BF30BF /* AudioRecorder.swift in Sources */,
 				E2D3219F28D06305004B9518 /* FMessageListener.swift in Sources */,
 				E28B253128CDF5EB00ABBD7E /* FileStorage.swift in Sources */,
 				E2C164B128F82C5500BF30BF /* LocationManager.swift in Sources */,
 				E28B253328CDFF4000ABBD7E /* GlobalFunc.swift in Sources */,
+				E234B8812A443C8D007B5B54 /* CreateGroupViewController.swift in Sources */,
 				E2D3217A28CF522D004B9518 /* UsersTableViewCell.swift in Sources */,
 				E28B252028CDBDA900ABBD7E /* User.swift in Sources */,
 				E2D3219B28D0563A004B9518 /* MKMessage.swift in Sources */,
 				E2D3219528D05382004B9518 /* MessageLayoutDelegate.swift in Sources */,
+				E234B87C2A441AC8007B5B54 /* FollowGroupViewController.swift in Sources */,
 				E28B253528CE055300ABBD7E /* Extenstions.swift in Sources */,
-				E2DB6E82296CEFE1000A6552 /* AddChannelTableViewController.swift in Sources */,
 				E2D3218028CF6647004B9518 /* ChatRoom.swift in Sources */,
 				E2C164AE28F8236A00BF30BF /* VideoMessage.swift in Sources */,
 				E2D3219128D05360004B9518 /* MessagesCellDelegate.swift in Sources */,
+				E234B8872A4460C7007B5B54 /* TVExtenstion.swift in Sources */,
 				E2D3218828CF7614004B9518 /* FChatRoomListener.swift in Sources */,
 				E2DB6E80296CE08B000A6552 /* Channel.swift in Sources */,
-				E2DB6E7E296CDEE2000A6552 /* ChannelsTableViewController.swift in Sources */,
-				E2D3217E28CF61DE004B9518 /* ProfileTableViewController.swift in Sources */,
+				E234B8852A445EB8007B5B54 /* TFExtenstion.swift in Sources */,
+				E234B8712A440424007B5B54 /* MyChannelCollectionViewCell.swift in Sources */,
 				E2C164B528F832CA00BF30BF /* MapViewController.swift in Sources */,
-				E208A0E128CD9BFF00F2392D /* LoginViewController.swift in Sources */,
+				E2987E292A4306FB005E52E8 /* EditProfileViewController.swift in Sources */,
+				E234B8672A43FC76007B5B54 /* GroupsViewController.swift in Sources */,
+				E234B87E2A44276C007B5B54 /* AboutGroupViewController.swift in Sources */,
 				E2D321A728D34A5E004B9518 /* PhotoMessage.swift in Sources */,
 				E2DB6E8B296D27CF000A6552 /* MessagesDataSource.swift in Sources */,
+				E26B65022A42F5CE0083EFD6 /* ChatsViewController.swift in Sources */,
 				E2D3219928D05561004B9518 /* MKSender.swift in Sources */,
 				E208A0DD28CD9BFF00F2392D /* AppDelegate.swift in Sources */,
+				E2987E272A4306F3005E52E8 /* ProfileViewController.swift in Sources */,
 				E2D3219D28D0623B004B9518 /* RealmManager.swift in Sources */,
 				E28B252728CDBF4D00ABBD7E /* FUserListener.swift in Sources */,
-				E28B252F28CDE97500ABBD7E /* EditProfileTableViewController.swift in Sources */,
 				E2C164BB28F8418200BF30BF /* AudioMessage.swift in Sources */,
 				E2D321A128D06404004B9518 /* Outgoing.swift in Sources */,
+				E234B8832A44576D007B5B54 /* UsersViewController.swift in Sources */,
 				E2D3218A28D041CE004B9518 /* MSGViewController.swift in Sources */,
 				E2D3218228CF6927004B9518 /* ChatTableViewCell.swift in Sources */,
 				E28B252928CDC51100ABBD7E /* Constants.swift in Sources */,
+				E234B88A2A447217007B5B54 /* LoginViewController.swift in Sources */,
 				E2C164B728F8357800BF30BF /* MapAnnotation.swift in Sources */,
+				E2987E232A4301F1005E52E8 /* HomeView.swift in Sources */,
 				E2D3218628CF70A6004B9518 /* StartChat.swift in Sources */,
 				E28B252528CDBE7000ABBD7E /* FCollectionRef.swift in Sources */,
 				E2D3219328D05372004B9518 /* MessagesDisplayDelegate.swift in Sources */,
+				E234B8782A441495007B5B54 /* CreateChannelCollectionViewCell.swift in Sources */,
 				E2DB6E7C296CDD73000A6552 /* ChannelTableViewCell.swift in Sources */,
-				E2D3217C28CF5247004B9518 /* UsersTableViewController.swift in Sources */,
+				E234B88B2A447217007B5B54 /* RegisterViewController.swift in Sources */,
 				E2D3218C28D04AED004B9518 /* LocalMessage.swift in Sources */,
 				E208A0DF28CD9BFF00F2392D /* SceneDelegate.swift in Sources */,
-				E2D3218428CF695A004B9518 /* ChatsTableViewController.swift in Sources */,
 				E2D321A528D1CCB3004B9518 /* FTypingListener.swift in Sources */,
 				E2E7253D28F845C20044D034 /* BasicAudioController.swift in Sources */,
 			);
@@ -846,6 +894,7 @@
 				DEVELOPMENT_TEAM = 2WTTDWZDQX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Dardasha/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HiLo;
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Dardasha  need use photo library";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Dardasha  need use camera";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Dardasha  need use location";
@@ -883,6 +932,7 @@
 				DEVELOPMENT_TEAM = 2WTTDWZDQX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Dardasha/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HiLo;
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Dardasha  need use photo library";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Dardasha  need use camera";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Dardasha  need use location";

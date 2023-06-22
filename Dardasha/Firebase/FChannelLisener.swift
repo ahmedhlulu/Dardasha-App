@@ -53,8 +53,15 @@ class FChannelListener {
                 return try? queryDocumentSnapshot.data(as: Channel.self)
             }
             
-            subscribedCahnnels.sort(by: {$0.memberIds.count > $1.memberIds.count})
-            completion(subscribedCahnnels)
+            var channels = [Channel]()
+            for channel in subscribedCahnnels {
+                if channel.adminId != User.currentId {
+                    channels.append(channel)
+                }
+            }
+            
+            channels.sort(by: {$0.memberIds.count > $1.memberIds.count})
+            completion(channels)
         })
     }
     
