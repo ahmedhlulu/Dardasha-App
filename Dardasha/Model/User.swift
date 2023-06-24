@@ -131,7 +131,7 @@ func saveUserLocally(_ user : User){
 //    }
 //}
 //
-
+//
 //func createDummyChannels(){
 //
 //    let names = [

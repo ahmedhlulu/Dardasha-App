@@ -16,6 +16,7 @@ class CreateChannelCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        imageView.makeRounded()
     }
 
 }

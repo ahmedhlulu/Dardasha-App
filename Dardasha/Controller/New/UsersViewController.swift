@@ -25,11 +25,7 @@ class UsersViewController: UIViewController {
         navigationItem.searchController = searchController
         
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search Users"
-        
-        searchController.searchBar.barTintColor = .white
-        searchController.searchBar.tintColor = .white
-        searchController.searchBar.searchTextField.backgroundColor = .white
+        searchController.searchBar.setColorAndPlaceholder(placeholder: "Search Users")
         
         definesPresentationContext = true
         searchController.searchResultsUpdater = self

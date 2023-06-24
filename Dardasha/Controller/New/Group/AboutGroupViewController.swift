@@ -12,9 +12,10 @@ class AboutGroupViewController: UIViewController {
     
     var channel: Channel!
     var users: [User]!
-    var isMember: Bool!
+    var isMember = false
     
     
+    @IBOutlet weak var avatarView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var groupName: UILabel!
     @IBOutlet weak var groupAbout: UILabel!
@@ -39,7 +40,7 @@ class AboutGroupViewController: UIViewController {
     }
     
     func configureView(){
-        imageView.makeRounded()
+        imageView.applyshadowWithCorner(containerView: avatarView)
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -51,7 +52,9 @@ class AboutGroupViewController: UIViewController {
         tableView.register(UINib(nibName: "UsersTableViewCell", bundle: nil), forCellReuseIdentifier: "UsersTableViewCell")
         
         for user in users {
-            self.isMember = user == User.currentUser
+            if user.id == User.currentId {
+                self.isMember = true
+            }
         }
         groupName.text = channel.name
         groupAbout.text = channel.aboutChannel
@@ -65,9 +68,9 @@ class AboutGroupViewController: UIViewController {
         }
         
         if channel.adminId == User.currentId {
-            groupFollow.setTitle("Delete", for: .normal)
+            groupFollow.setTitle("Edit", for: .normal)
         } else if isMember {
-            groupFollow.setTitle("Un Follow", for: .normal)
+            groupFollow.setTitle("Unfollow", for: .normal)
         } else {
             groupFollow.setTitle("Follow", for: .normal)
         }
@@ -81,14 +84,10 @@ class AboutGroupViewController: UIViewController {
 
     @IBAction func groupFollowClicked(_ sender: Any) {
         if channel.adminId == User.currentId {
-            FChannelListener.shared.deleteChannel(channel: channel!) { error in
-                guard error == nil else {
-                    ProgressHUD.showError(error!)
-                    return
-                }
-                ProgressHUD.showSuccess("Channel Deleted")
-                self.goBack()
-            }
+
+            guard let channelToEdit = storyboard?.instantiateViewController(withIdentifier: "CreateGroupViewController") as? CreateGroupViewController else {return}
+            channelToEdit.channelToEdit = channel
+            navigationController?.pushViewController(channelToEdit, animated: true)
         } else if isMember {
             if let index = channel.memberIds.firstIndex(of: User.currentId){
                 channel.memberIds.remove(at: index)

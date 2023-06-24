@@ -15,23 +15,26 @@ class ChannelMSGViewController: MessagesViewController {
     
     //custom view for title
     let leftBarButtonView: UIView = {
-        return UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+        let view = UIView()
+        view.frame = CGRect(x: 0, y: 0, width: 300, height: 50)
+//        view.backgroundColor = .red
+        return view
     }()
-//    let titleLabel: UILabel = {
-//        let title = UILabel(frame: CGRect(x: 5, y: 0, width: 100, height: 25))
-//        title.textAlignment = .left
-//        title.font = UIFont.systemFont(ofSize: 60, weight: .medium)
-//        title.adjustsFontSizeToFitWidth = true
-//        return title
-//    }()
-//    let subTitleLabel: UILabel = {
-//        let subTitle = UILabel(frame: CGRect(x: 5, y: 22, width: 100, height: 25))
-//        subTitle.font = UIFont.systemFont(ofSize: 12, weight: .medium)
-//        subTitle.textColor = .systemGray
-//        subTitle.adjustsFontSizeToFitWidth = true
-//        subTitle.textAlignment = .left
-//        return subTitle
-//    }()
+    let titleLabel: UILabel = {
+        let title = UILabel(frame: CGRect(x: 5, y: 0, width: 200, height: 25))
+        title.textAlignment = .left
+        title.font = UIFont.systemFont(ofSize: 60, weight: .medium)
+        title.adjustsFontSizeToFitWidth = true
+        return title
+    }()
+    let subTitleLabel: UILabel = {
+        let subTitle = UILabel(frame: CGRect(x: 5, y: 22, width: 200, height: 25))
+        subTitle.font = UIFont.systemFont(ofSize: 12, weight: .medium)
+        subTitle.textColor = .systemGray
+        subTitle.adjustsFontSizeToFitWidth = true
+        subTitle.textAlignment = .left
+        return subTitle
+    }()
     
     var channel: Channel!
     
@@ -240,17 +243,18 @@ class ChannelMSGViewController: MessagesViewController {
     
     //Configure custom title
     func configureCustomTitle(){
-        self.navigationItem.leftBarButtonItems = [UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonPressed))]
+        self.navigationItem.leftBarButtonItems = [UIBarButtonItem(image: UIImage(systemName: "arrowshape.backward.fill"), style: .plain, target: self, action: #selector(backButtonPressed))]
         
-//        leftBarButtonView.addSubview(titleLabel)
-//        leftBarButtonView.addSubview(subTitleLabel)
-//
-//        let leftBarButtinItem = UIBarButtonItem(customView: leftBarButtonView)
-//
-//        self.navigationItem.leftBarButtonItems?.append(leftBarButtinItem)
-//        titleLabel.text = recipientName
+        leftBarButtonView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(titleClicked)))
         
-        self.title = channel.name
+        leftBarButtonView.addSubview(titleLabel)
+        leftBarButtonView.addSubview(subTitleLabel)
+
+        let leftBarButtinItem = UIBarButtonItem(customView: leftBarButtonView)
+
+        self.navigationItem.leftBarButtonItems?.append(leftBarButtinItem)
+        titleLabel.text = channel.name
+        subTitleLabel.text = "\(channel.memberIds.count) member"
     }
     
     @objc func backButtonPressed(){
@@ -261,34 +265,15 @@ class ChannelMSGViewController: MessagesViewController {
         navigationController?.popViewController(animated: true)
     }
     
-//    func updateTypingIndicator(_ show: Bool){
-//        subTitleLabel.text = show ? "Typing..." : ""
-//    }
-//
-//    func startTypingIndicator(){
-//        typingCounter += 1
-//        FTypingListener.shared.saveTypingCounter(typing: true, chatRoomId: chatId)
-//
-//        //Stop typing
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-//            self.stopTypingIndicator()
-//        }
-//    }
-//
-//    func stopTypingIndicator(){
-//        typingCounter -= 1
-//        if typingCounter == 0 {
-//            FTypingListener.shared.saveTypingCounter(typing: false, chatRoomId: chatId)
-//        }
-//    }
-//
-//    func createTypingObserver(){
-//        FTypingListener.shared.createTypingObserver(chatRoomId: chatId) { isTyping in
-//            DispatchQueue.main.async {
-//                self.updateTypingIndicator(isTyping)
-//            }
-//        }
-//    }
+    @objc func titleClicked(){
+        guard let channelVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "AboutGroupViewController") as? AboutGroupViewController else {return}
+        FUserListener.shared.downloadUsersFromFirestore(withIds: channel.memberIds) { allUsers in
+            channelVC.channel = self.channel
+            channelVC.users = allUsers
+            self.navigationController?.pushViewController(channelVC, animated: true)
+        }
+    }
+    
     
     private func markMessageAsRead(_ localMessage: LocalMessage){
         if localMessage.senderId != User.currentId {
@@ -296,27 +281,6 @@ class ChannelMSGViewController: MessagesViewController {
         }
     }
     
-//    private func updateReadStatus(_ updatedLocalMessage: LocalMessage){
-//        for index in 0 ..< mkMessages.count {
-//            let tempMessage = mkMessages[index]
-//            if updatedLocalMessage.id == tempMessage.messageId {
-//                mkMessages[index].status = updatedLocalMessage.status
-//                mkMessages[index].readDate = updatedLocalMessage.readDate
-//
-//                RealmManager.shared.save(updatedLocalMessage)
-//
-//                if mkMessages[index].status == kREAD {
-//                    self.messagesCollectionView.reloadData()
-//                }
-//            }
-//        }
-//    }
-//
-//    private func listenForReadStatusUpdates(){
-//        FMessageListener.shared.listenForReadStatus(User.currentId, collectionId: chatId) { updatedMessage in
-//            self.updateReadStatus(updatedMessage)
-//        }
-//    }
     
     private func configureGestureRecognizer(){
         longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(recoredAndSend))

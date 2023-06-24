@@ -15,10 +15,22 @@ extension UIImageView {
         contentMode = .scaleAspectFill
         layer.borderWidth = 1
         layer.masksToBounds = false
-        layer.borderColor = UIColor.black.cgColor
+        layer.borderColor = #colorLiteral(red: 0.5568627451, green: 0.5568627451, blue: 0.5764705882, alpha: 1).cgColor
         layer.cornerRadius = self.frame.height / 2
         clipsToBounds = true
     }
+    
+    func applyshadowWithCorner(containerView : UIView){
+            containerView.clipsToBounds = false
+            containerView.layer.shadowColor = UIColor.black.cgColor
+            containerView.layer.shadowOpacity = 1
+            containerView.layer.shadowOffset = CGSize.zero
+            containerView.layer.shadowRadius = 10
+        containerView.layer.cornerRadius = self.frame.width / 2
+            containerView.layer.shadowPath = UIBezierPath(roundedRect: containerView.bounds, cornerRadius: self.frame.width / 2).cgPath
+            self.clipsToBounds = true
+            self.layer.cornerRadius = self.frame.width / 2
+        }
 }
 
 extension Date {
@@ -50,4 +62,43 @@ extension Date {
         return Float(end - start)
     }
     
+}
+
+
+extension UITextField {
+    fileprivate func setPasswordToggleImage(_ button: UIButton) {
+        if(isSecureTextEntry){
+            button.setImage(UIImage(systemName: "eye"), for: .normal)
+            //button.setTitle("show ", for: .normal)
+        }else{
+            button.setImage(UIImage(systemName: "eye.slash"), for: .normal)
+            //button.setTitle("hide ", for: .normal)
+            
+        }
+    }
+    
+    func enablePasswordToggle(){
+        let button = UIButton(type: .custom)
+        setPasswordToggleImage(button)
+        button.backgroundColor = UIColor(named: "AccentColor")
+        button.tintColor = .white
+        button.layer.cornerRadius = 15
+        button.addTarget(self, action: #selector(self.togglePasswordView), for: .touchUpInside)
+        self.rightView = button
+        self.rightViewMode = .always
+    }
+    @IBAction func togglePasswordView(_ sender: Any) {
+        self.isSecureTextEntry = !self.isSecureTextEntry
+        setPasswordToggleImage(sender as! UIButton)
+    }
+}
+
+extension UISearchBar {
+    
+    func setColorAndPlaceholder(placeholder: String){
+        self.placeholder = placeholder
+        self.searchTextField.backgroundColor = UIColor(named: "ColorTextField")
+        self.tintColor = .label
+        self.barStyle = .black
+    }
 }

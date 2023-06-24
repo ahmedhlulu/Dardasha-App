@@ -9,6 +9,7 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var avatarView: UIView!
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var usernameLbl: UILabel!
     @IBOutlet weak var emailTitleLbl: UILabel!
@@ -26,7 +27,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        avatarImageView.makeRounded()
+        avatarImageView.applyshadowWithCorner(containerView: avatarView)
         showUserInfo()
         
     }
@@ -87,6 +88,7 @@ class ProfileViewController: UIViewController {
             emailTitleLbl.isHidden = true
             emailLbl.isHidden = true
             memberDateTitleLbl.isHidden = true
+            logoutBtn.isHidden = true
             editProfileBtn.setTitle("Start Chat", for: .normal)
             
             if user.avatarLink != "" {

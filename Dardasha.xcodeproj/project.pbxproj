@@ -22,8 +22,7 @@
 		E234B87E2A44276C007B5B54 /* AboutGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234B87D2A44276C007B5B54 /* AboutGroupViewController.swift */; };
 		E234B8812A443C8D007B5B54 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234B8802A443C8D007B5B54 /* CreateGroupViewController.swift */; };
 		E234B8832A44576D007B5B54 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234B8822A44576D007B5B54 /* UsersViewController.swift */; };
-		E234B8852A445EB8007B5B54 /* TFExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234B8842A445EB8007B5B54 /* TFExtenstion.swift */; };
-		E234B8872A4460C7007B5B54 /* TVExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234B8862A4460C7007B5B54 /* TVExtenstion.swift */; };
+		E234B8852A445EB8007B5B54 /* MyXTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234B8842A445EB8007B5B54 /* MyXTextField.swift */; };
 		E234B88A2A447217007B5B54 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234B8882A447216007B5B54 /* LoginViewController.swift */; };
 		E234B88B2A447217007B5B54 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234B8892A447217007B5B54 /* RegisterViewController.swift */; };
 		E26B64F42A42C8570083EFD6 /* UsersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E26B64F22A42C8570083EFD6 /* UsersTableViewCell.xib */; };
@@ -38,7 +37,7 @@
 		E28B253128CDF5EB00ABBD7E /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B253028CDF5EB00ABBD7E /* FileStorage.swift */; };
 		E28B253328CDFF4000ABBD7E /* GlobalFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B253228CDFF4000ABBD7E /* GlobalFunc.swift */; };
 		E28B253528CE055300ABBD7E /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B253428CE055300ABBD7E /* Extenstions.swift */; };
-		E2987E232A4301F1005E52E8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2987E222A4301F1005E52E8 /* HomeView.swift */; };
+		E2987E232A4301F1005E52E8 /* MyXView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2987E222A4301F1005E52E8 /* MyXView.swift */; };
 		E2987E272A4306F3005E52E8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2987E262A4306F3005E52E8 /* ProfileViewController.swift */; };
 		E2987E292A4306FB005E52E8 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2987E282A4306FB005E52E8 /* EditProfileViewController.swift */; };
 		E2C164AE28F8236A00BF30BF /* VideoMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C164AD28F8236A00BF30BF /* VideoMessage.swift */; };
@@ -95,8 +94,7 @@
 		E234B87D2A44276C007B5B54 /* AboutGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutGroupViewController.swift; sourceTree = "<group>"; };
 		E234B8802A443C8D007B5B54 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
 		E234B8822A44576D007B5B54 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
-		E234B8842A445EB8007B5B54 /* TFExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFExtenstion.swift; sourceTree = "<group>"; };
-		E234B8862A4460C7007B5B54 /* TVExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVExtenstion.swift; sourceTree = "<group>"; };
+		E234B8842A445EB8007B5B54 /* MyXTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyXTextField.swift; sourceTree = "<group>"; };
 		E234B8882A447216007B5B54 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E234B8892A447217007B5B54 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		E26B64F22A42C8570083EFD6 /* UsersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersTableViewCell.xib; sourceTree = "<group>"; };
@@ -111,7 +109,7 @@
 		E28B253028CDF5EB00ABBD7E /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
 		E28B253228CDFF4000ABBD7E /* GlobalFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunc.swift; sourceTree = "<group>"; };
 		E28B253428CE055300ABBD7E /* Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
-		E2987E222A4301F1005E52E8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E2987E222A4301F1005E52E8 /* MyXView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyXView.swift; sourceTree = "<group>"; };
 		E2987E262A4306F3005E52E8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E2987E282A4306FB005E52E8 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		E2C164AD28F8236A00BF30BF /* VideoMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoMessage.swift; sourceTree = "<group>"; };
@@ -243,7 +241,7 @@
 		E208A0DB28CD9BFF00F2392D /* Dardasha */ = {
 			isa = PBXGroup;
 			children = (
-				E26B64E82A42C7F40083EFD6 /* Views */,
+				E26B64E82A42C7F40083EFD6 /* CellViews */,
 				E28B252D28CDE51300ABBD7E /* Helpers */,
 				E28B252128CDBE0C00ABBD7E /* Model */,
 				E28B252228CDBE1E00ABBD7E /* Storyboard */,
@@ -263,8 +261,8 @@
 				E26B65012A42F5CE0083EFD6 /* ChatsViewController.swift */,
 				E2987E262A4306F3005E52E8 /* ProfileViewController.swift */,
 				E2987E282A4306FB005E52E8 /* EditProfileViewController.swift */,
-				E234B87F2A443C70007B5B54 /* Group */,
 				E234B8822A44576D007B5B54 /* UsersViewController.swift */,
+				E234B87F2A443C70007B5B54 /* Group */,
 			);
 			path = New;
 			sourceTree = "<group>";
@@ -276,11 +274,12 @@
 				E234B87B2A441AC8007B5B54 /* FollowGroupViewController.swift */,
 				E234B87D2A44276C007B5B54 /* AboutGroupViewController.swift */,
 				E234B8802A443C8D007B5B54 /* CreateGroupViewController.swift */,
+				E2DB6E87296D18FF000A6552 /* ChannelMSGViewController.swift */,
 			);
 			path = Group;
 			sourceTree = "<group>";
 		};
-		E26B64E82A42C7F40083EFD6 /* Views */ = {
+		E26B64E82A42C7F40083EFD6 /* CellViews */ = {
 			isa = PBXGroup;
 			children = (
 				E2D3217928CF522D004B9518 /* UsersTableViewCell.swift */,
@@ -294,7 +293,7 @@
 				E234B8762A441494007B5B54 /* CreateChannelCollectionViewCell.swift */,
 				E234B8772A441495007B5B54 /* CreateChannelCollectionViewCell.xib */,
 			);
-			path = Views;
+			path = CellViews;
 			sourceTree = "<group>";
 		};
 		E28B252128CDBE0C00ABBD7E /* Model */ = {
@@ -334,7 +333,6 @@
 				E208A0DE28CD9BFF00F2392D /* SceneDelegate.swift */,
 				E234B87A2A441A3F007B5B54 /* New */,
 				E2D3218D28D052E5004B9518 /* MSGViewController */,
-				E2DB6E87296D18FF000A6552 /* ChannelMSGViewController.swift */,
 				E2C164B428F832CA00BF30BF /* MapViewController.swift */,
 			);
 			path = Controller;
@@ -362,9 +360,8 @@
 				E28B253228CDFF4000ABBD7E /* GlobalFunc.swift */,
 				E28B253428CE055300ABBD7E /* Extenstions.swift */,
 				E2D3218528CF70A6004B9518 /* StartChat.swift */,
-				E2987E222A4301F1005E52E8 /* HomeView.swift */,
-				E234B8842A445EB8007B5B54 /* TFExtenstion.swift */,
-				E234B8862A4460C7007B5B54 /* TVExtenstion.swift */,
+				E2987E222A4301F1005E52E8 /* MyXView.swift */,
+				E234B8842A445EB8007B5B54 /* MyXTextField.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -708,10 +705,9 @@
 				E2D3218028CF6647004B9518 /* ChatRoom.swift in Sources */,
 				E2C164AE28F8236A00BF30BF /* VideoMessage.swift in Sources */,
 				E2D3219128D05360004B9518 /* MessagesCellDelegate.swift in Sources */,
-				E234B8872A4460C7007B5B54 /* TVExtenstion.swift in Sources */,
 				E2D3218828CF7614004B9518 /* FChatRoomListener.swift in Sources */,
 				E2DB6E80296CE08B000A6552 /* Channel.swift in Sources */,
-				E234B8852A445EB8007B5B54 /* TFExtenstion.swift in Sources */,
+				E234B8852A445EB8007B5B54 /* MyXTextField.swift in Sources */,
 				E234B8712A440424007B5B54 /* MyChannelCollectionViewCell.swift in Sources */,
 				E2C164B528F832CA00BF30BF /* MapViewController.swift in Sources */,
 				E2987E292A4306FB005E52E8 /* EditProfileViewController.swift in Sources */,
@@ -733,7 +729,7 @@
 				E28B252928CDC51100ABBD7E /* Constants.swift in Sources */,
 				E234B88A2A447217007B5B54 /* LoginViewController.swift in Sources */,
 				E2C164B728F8357800BF30BF /* MapAnnotation.swift in Sources */,
-				E2987E232A4301F1005E52E8 /* HomeView.swift in Sources */,
+				E2987E232A4301F1005E52E8 /* MyXView.swift in Sources */,
 				E2D3218628CF70A6004B9518 /* StartChat.swift in Sources */,
 				E28B252528CDBE7000ABBD7E /* FCollectionRef.swift in Sources */,
 				E2D3219328D05372004B9518 /* MessagesDisplayDelegate.swift in Sources */,

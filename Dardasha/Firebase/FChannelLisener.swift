@@ -48,7 +48,7 @@ class FChannelListener {
             
             guard let document = querySnapshot?.documents else { return }
             
-            var subscribedCahnnels = document.compactMap { queryDocumentSnapshot -> Channel? in
+            let subscribedCahnnels = document.compactMap { queryDocumentSnapshot -> Channel? in
                 
                 return try? queryDocumentSnapshot.data(as: Channel.self)
             }

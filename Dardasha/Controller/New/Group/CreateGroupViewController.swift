@@ -11,6 +11,7 @@ import ProgressHUD
 
 class CreateGroupViewController: UIViewController {
 
+    @IBOutlet weak var avatarView: UIView!
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var aboutTextView: UITextView!
@@ -28,7 +29,7 @@ class CreateGroupViewController: UIViewController {
 
         title = "Create Group"
         configureBackButtonItem()
-        avatarImageView.makeRounded()
+        avatarImageView.applyshadowWithCorner(containerView: avatarView)
         deleteChannelBtn.isHidden = true
         configuredEditView()
         
@@ -118,7 +119,7 @@ class CreateGroupViewController: UIViewController {
         self.channelId = channel.id
         self.aboutTextView.text = channel.aboutChannel
         self.avatarLink = channel.avatarLink
-        self.title = "Editing (\(channel.name) Group)"
+        self.title = "Editing (\(channel.name)) Group"
         
         
         if channel.avatarLink != "" {

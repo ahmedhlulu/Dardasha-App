@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
         
         emailTF.delegate = self
         passwordTF.delegate = self
+        passwordTF.enablePasswordToggle()
         
         emailTF.text = testEmail
         passwordTF.text = testEmailPassword

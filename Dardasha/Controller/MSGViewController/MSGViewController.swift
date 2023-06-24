@@ -15,17 +15,20 @@ class MSGViewController: MessagesViewController {
     
     //custom view for title
     let leftBarButtonView: UIView = {
-        return UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+        let view = UIView()
+        view.frame = CGRect(x: 0, y: 0, width: 300, height: 50)
+//        view.backgroundColor = .red
+        return view
     }()
     let titleLabel: UILabel = {
-        let title = UILabel(frame: CGRect(x: 5, y: 0, width: 100, height: 25))
+        let title = UILabel(frame: CGRect(x: 5, y: 0, width: 200, height: 25))
         title.textAlignment = .left
         title.font = UIFont.systemFont(ofSize: 60, weight: .medium)
         title.adjustsFontSizeToFitWidth = true
         return title
     }()
     let subTitleLabel: UILabel = {
-        let subTitle = UILabel(frame: CGRect(x: 5, y: 22, width: 100, height: 25))
+        let subTitle = UILabel(frame: CGRect(x: 5, y: 22, width: 200, height: 25))
         subTitle.font = UIFont.systemFont(ofSize: 12, weight: .medium)
         subTitle.textColor = .systemGray
         subTitle.adjustsFontSizeToFitWidth = true
@@ -95,6 +98,8 @@ class MSGViewController: MessagesViewController {
         
         tabBarController?.tabBar.isHidden = true
         navigationItem.largeTitleDisplayMode = .never
+        
+        
     }
     
     
@@ -236,7 +241,9 @@ class MSGViewController: MessagesViewController {
     
     //Configure custom title
     func configureCustomTitle(){
-        self.navigationItem.leftBarButtonItems = [UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonPressed))]
+        self.navigationItem.leftBarButtonItems = [UIBarButtonItem(image: UIImage(systemName: "arrowshape.backward.fill"), style: .plain, target: self, action: #selector(backButtonPressed))]
+        
+        leftBarButtonView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(titleClicked)))
         
         leftBarButtonView.addSubview(titleLabel)
         leftBarButtonView.addSubview(subTitleLabel)
@@ -252,7 +259,16 @@ class MSGViewController: MessagesViewController {
         removeListeners()
         FChatRoomListener.shared.clearUnreadCounterUsingChatRoomId(chatRoomId: chatId)
         tabBarController?.tabBar.isHidden = false
-        navigationController?.popViewController(animated: true)
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @objc func titleClicked(){
+        guard let profileVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController else {return}
+        FUserListener.shared.downloadUserFromFirestoreWith(userId: recipientId) { user in
+            profileVC.user = user
+            self.navigationController?.pushViewController(profileVC, animated: true)
+        }
+        
     }
     
     func updateTypingIndicator(_ show: Bool){

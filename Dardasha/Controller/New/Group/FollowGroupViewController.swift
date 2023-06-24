@@ -25,11 +25,7 @@ class FollowGroupViewController: UIViewController {
 //        navigationItem.hidesSearchBarWhenScrolling = true
         
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search Groups"
-        
-        searchController.searchBar.barTintColor = .white
-        searchController.searchBar.tintColor = .white
-        searchController.searchBar.searchTextField.backgroundColor = .white
+        searchController.searchBar.setColorAndPlaceholder(placeholder: "Search Groups")
         
         definesPresentationContext = true
         searchController.searchResultsUpdater = self

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewCell" rowHeight="-5" id="WPF-Ho-snF" customClass="ChatTableViewCell" customModule="Dardasha" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WPF-Ho-snF" id="Rlm-sh-dhu">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rvm-NJ-vIh">
+                        <rect key="frame" x="12" y="11" width="60" height="58.666666666666671"/>
+                        <color key="backgroundColor" name="ColorAvatarBackground"/>
+                        <color key="tintColor" name="ColorAvatar"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="A6z-Ac-IE7"/>
+                            <constraint firstAttribute="height" constant="60" id="AOj-SG-eRu"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUd-Yt-3ff">
+                        <rect key="frame" x="82" y="10" width="196" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="last message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jM-Of-I6v">
+                        <rect key="frame" x="82" y="52" width="246" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" systemColor="systemGrayColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14-12-2020" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="gpR-fL-QTw">
+                        <rect key="frame" x="288" y="10" width="100" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="hB9-4c-2lj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" systemColor="systemGrayColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2BQ-2X-qNQ">
+                        <rect key="frame" x="338" y="40" width="30" height="30"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsU-zz-EUS">
+                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="wsU-zz-EUS" secondAttribute="bottom" id="8mk-vO-51m"/>
+                            <constraint firstAttribute="trailing" secondItem="wsU-zz-EUS" secondAttribute="trailing" id="EIf-8x-Boy"/>
+                            <constraint firstItem="wsU-zz-EUS" firstAttribute="leading" secondItem="2BQ-2X-qNQ" secondAttribute="leading" id="Mu2-bb-Ggk"/>
+                            <constraint firstItem="wsU-zz-EUS" firstAttribute="top" secondItem="2BQ-2X-qNQ" secondAttribute="top" id="OIU-7E-il2"/>
+                            <constraint firstAttribute="height" constant="30" id="Soq-9u-8ft"/>
+                            <constraint firstAttribute="width" constant="30" id="h5O-rZ-cgN"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" name="ColorCell"/>
+                <constraints>
+                    <constraint firstItem="rvm-NJ-vIh" firstAttribute="leading" secondItem="Rlm-sh-dhu" secondAttribute="leading" constant="12" id="7tO-NL-SIJ"/>
+                    <constraint firstItem="5jM-Of-I6v" firstAttribute="bottom" secondItem="rvm-NJ-vIh" secondAttribute="bottom" id="EVc-dS-tod"/>
+                    <constraint firstItem="5jM-Of-I6v" firstAttribute="leading" secondItem="rvm-NJ-vIh" secondAttribute="trailing" constant="10" id="LUt-Kb-hQA"/>
+                    <constraint firstItem="hUd-Yt-3ff" firstAttribute="top" secondItem="rvm-NJ-vIh" secondAttribute="top" id="UDJ-fR-87V"/>
+                    <constraint firstAttribute="trailing" secondItem="gpR-fL-QTw" secondAttribute="trailing" constant="5" id="Yom-dX-oDq"/>
+                    <constraint firstItem="rvm-NJ-vIh" firstAttribute="centerY" secondItem="Rlm-sh-dhu" secondAttribute="centerY" id="a2S-va-zEc"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="2BQ-2X-qNQ" secondAttribute="trailing" constant="5" id="bmK-5B-VVy"/>
+                    <constraint firstItem="hUd-Yt-3ff" firstAttribute="leading" secondItem="rvm-NJ-vIh" secondAttribute="trailing" constant="10" id="gcJ-vY-Fzn"/>
+                    <constraint firstItem="gpR-fL-QTw" firstAttribute="top" secondItem="hUd-Yt-3ff" secondAttribute="top" id="tbA-xo-H4I"/>
+                    <constraint firstItem="2BQ-2X-qNQ" firstAttribute="bottom" secondItem="5jM-Of-I6v" secondAttribute="bottom" id="wrf-7B-O6I"/>
+                    <constraint firstItem="gpR-fL-QTw" firstAttribute="leading" secondItem="hUd-Yt-3ff" secondAttribute="trailing" constant="10" id="x5L-MR-bvi"/>
+                    <constraint firstItem="2BQ-2X-qNQ" firstAttribute="leading" secondItem="5jM-Of-I6v" secondAttribute="trailing" constant="10" id="yOc-Ai-e27"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="avatarImageView" destination="rvm-NJ-vIh" id="5K9-yH-d68"/>
+                <outlet property="dateLbl" destination="gpR-fL-QTw" id="Opv-9l-mDa"/>
+                <outlet property="lastMessageLbl" destination="5jM-Of-I6v" id="SIs-9b-CFA"/>
+                <outlet property="messageCounterLbl" destination="wsU-zz-EUS" id="2Nv-Xu-0su"/>
+                <outlet property="messageCounterView" destination="2BQ-2X-qNQ" id="ggK-v5-aj8"/>
+                <outlet property="usernameLbl" destination="hUd-Yt-3ff" id="HDe-5C-fed"/>
+            </connections>
+            <point key="canvasLocation" x="-254.19847328244273" y="-26.056338028169016"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="person.circle.fill" catalog="system" width="128" height="123"/>
+        <namedColor name="ColorAvatar">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorAvatarBackground">
+            <color red="0.94900000095367432" green="0.94900000095367432" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorCell">
+            <color red="0.99599999189376831" green="0.99599999189376831" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

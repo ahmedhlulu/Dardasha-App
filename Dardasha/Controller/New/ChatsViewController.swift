@@ -25,11 +25,7 @@ class ChatsViewController: UIViewController {
         navigationItem.hidesSearchBarWhenScrolling = true
         
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search Users"
-        
-        searchController.searchBar.barTintColor = .white
-        searchController.searchBar.tintColor = .white
-        searchController.searchBar.searchTextField.backgroundColor = .white
+        searchController.searchBar.setColorAndPlaceholder(placeholder: "Search Users")
         
         definesPresentationContext = true
         searchController.searchResultsUpdater = self
@@ -37,6 +33,7 @@ class ChatsViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "ChatTableViewCell", bundle: nil), forCellReuseIdentifier: "ChatTableViewCell")
+        tableView.tableFooterView = UIView()
     }
     
     
@@ -112,11 +109,12 @@ extension ChatsViewController : UISearchResultsUpdating ,UITableViewDelegate, UI
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         let chatRoomObject = searchController.searchBar.text != "" ? filteredChatRooms[indexPath.row] : allChatRooms[indexPath.row]
         
         goToMSG(chatRoom: chatRoomObject)
     }
+    
+    
     
     
 }

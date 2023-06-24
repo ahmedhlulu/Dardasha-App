@@ -4,7 +4,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,30 +18,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Qn3-fq-lyK">
-                                <rect key="frame" x="0.0" y="328.5" width="414" height="239"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="239.5" id="DFx-zm-svm"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HiLo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIJ-Ef-d0m">
-                                <rect key="frame" x="154" y="791" width="106" height="75"/>
+                                <rect key="frame" x="154.5" y="791.5" width="105.5" height="74.5"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="57"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="CbC-fz-xow">
+                                <rect key="frame" x="40" y="384.5" width="334" height="127"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start chatting now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="Cgp-mv-M6C">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Match and chat with people you like from your area." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="KF5-NX-eQm">
+                                        <rect key="frame" x="0.0" y="72" width="334" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hT0-7g-4Qt">
+                                <rect key="frame" x="87" y="216.5" width="240" height="127.5"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="SK2-Gj-xTD"/>
+                                    <constraint firstAttribute="width" constant="240" id="pPx-8m-Fcl"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.12941176469999999" green="0.12549019610000001" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="CbC-fz-xow" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="1Lk-F6-rCY"/>
                             <constraint firstAttribute="bottom" secondItem="DIJ-Ef-d0m" secondAttribute="bottom" constant="30" id="2wo-Bi-Rxd"/>
+                            <constraint firstAttribute="trailing" secondItem="CbC-fz-xow" secondAttribute="trailing" constant="40" id="A1K-if-48J"/>
                             <constraint firstItem="DIJ-Ef-d0m" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Bdr-uJ-GDo"/>
-                            <constraint firstItem="Qn3-fq-lyK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="L4p-Dk-gMP"/>
-                            <constraint firstItem="Qn3-fq-lyK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ufn-E5-nJT"/>
-                            <constraint firstItem="Qn3-fq-lyK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tBn-a1-0k2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qn3-fq-lyK" secondAttribute="trailing" id="yCc-j5-cgO"/>
+                            <constraint firstItem="CbC-fz-xow" firstAttribute="top" secondItem="hT0-7g-4Qt" secondAttribute="bottom" constant="40" id="FZw-sV-vTT"/>
+                            <constraint firstItem="hT0-7g-4Qt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="kmM-Qn-BRr"/>
+                            <constraint firstItem="CbC-fz-xow" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="x3e-Kg-s4r"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -50,5 +70,11 @@
     </scenes>
     <resources>
         <image name="message.fill" catalog="system" width="128" height="114"/>
+        <namedColor name="AccentColor">
+            <color red="0.6774581755050505" green="0.46685219581112336" blue="0.61292217222577128" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

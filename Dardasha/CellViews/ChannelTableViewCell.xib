@@ -19,7 +19,8 @@
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dtW-Y0-3Ig">
                         <rect key="frame" x="20" y="11" width="60" height="58.666666666666671"/>
-                        <color key="tintColor" name="avatarViewBackground"/>
+                        <color key="backgroundColor" name="ColorAvatarBackground"/>
+                        <color key="tintColor" name="ColorAvatar"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="Ftf-NU-fzc"/>
                             <constraint firstAttribute="height" constant="60" id="oP8-Hu-O9I"/>
@@ -50,6 +51,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" name="ColorCell"/>
                 <constraints>
                     <constraint firstItem="nWW-gk-fqv" firstAttribute="leading" secondItem="dtW-Y0-3Ig" secondAttribute="trailing" constant="8" symbolic="YES" id="0l1-eX-JQM"/>
                     <constraint firstItem="8w4-1R-tj1" firstAttribute="leading" secondItem="dtW-Y0-3Ig" secondAttribute="trailing" constant="8" symbolic="YES" id="8kh-nb-2Ap"/>
@@ -78,11 +80,14 @@
     </objects>
     <resources>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
+        <namedColor name="ColorAvatar">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorAvatarBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="ColorCell">
             <color red="0.99599999189376831" green="0.99599999189376831" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="avatarViewBackground">
-            <color red="0.55699998140335083" green="0.55699998140335083" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

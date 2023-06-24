@@ -11,6 +11,7 @@ import ProgressHUD
 
 class EditProfileViewController: UIViewController {
     
+    @IBOutlet weak var avatarView: UIView!
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var statusTF: UITextView!
@@ -20,7 +21,7 @@ class EditProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        avatarImageView.makeRounded()
+        avatarImageView.applyshadowWithCorner(containerView: avatarView)
         setupBackgroundTapped()
         showUserInfo()
         usernameTF.delegate = self
