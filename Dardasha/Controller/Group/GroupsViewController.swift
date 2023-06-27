@@ -61,7 +61,7 @@ class GroupsViewController: UIViewController {
     }
     
     private func showChatView(channel:Channel){
-        let channelVC = ChannelMSGViewController(channel: channel)
+        let channelVC = GroupMSGViewController(channel: channel)
         self.navigationController?.pushViewController(channelVC, animated: true)
     }
     

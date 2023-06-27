@@ -31,7 +31,7 @@ extension MSGViewController: MessagesDisplayDelegate {
 }
 
 // MARK: - Channel
-extension ChannelMSGViewController: MessagesDisplayDelegate {
+extension GroupMSGViewController: MessagesDisplayDelegate {
     
     func textColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
         return .label

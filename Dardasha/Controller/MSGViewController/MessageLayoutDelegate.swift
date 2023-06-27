@@ -36,7 +36,7 @@ extension MSGViewController: MessagesLayoutDelegate {
 }
 
 // MARK: - Channel
-extension ChannelMSGViewController: MessagesLayoutDelegate {
+extension GroupMSGViewController: MessagesLayoutDelegate {
     
     func cellTopLabelHeight(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
         if indexPath.section % 3 == 0 {

@@ -88,7 +88,7 @@ extension MSGViewController: MessageCellDelegate {
 }
 
 // MARK: - Channel
-extension ChannelMSGViewController: MessageCellDelegate {
+extension GroupMSGViewController: MessageCellDelegate {
     
     func didTapImage(in cell: MessageCollectionViewCell) {
         

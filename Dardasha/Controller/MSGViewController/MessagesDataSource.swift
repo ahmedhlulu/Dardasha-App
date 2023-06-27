@@ -64,7 +64,7 @@ extension MSGViewController: MessagesDataSource {
 }
 
 // MARK: - Channel
-extension ChannelMSGViewController: MessagesDataSource {
+extension GroupMSGViewController: MessagesDataSource {
     func currentSender() -> MessageKit.SenderType {
         return currentUser
     }

@@ -11,7 +11,7 @@ import InputBarAccessoryView
 import Gallery
 import RealmSwift
 
-class ChannelMSGViewController: MessagesViewController {
+class GroupMSGViewController: MessagesViewController {
     
     //custom view for title
     let leftBarButtonView: UIView = {
@@ -379,7 +379,7 @@ class ChannelMSGViewController: MessagesViewController {
     
 }
 
-extension ChannelMSGViewController: GalleryControllerDelegate {
+extension GroupMSGViewController: GalleryControllerDelegate {
     
     func galleryController(_ controller: GalleryController, didSelectImages images: [Image]) {
         // TODO: send photo image

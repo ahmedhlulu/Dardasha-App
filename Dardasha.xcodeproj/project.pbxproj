@@ -70,7 +70,7 @@
 		E2DB6E7C296CDD73000A6552 /* ChannelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6E7B296CDD73000A6552 /* ChannelTableViewCell.swift */; };
 		E2DB6E80296CE08B000A6552 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6E7F296CE08B000A6552 /* Channel.swift */; };
 		E2DB6E84296CF652000A6552 /* FChannelLisener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6E83296CF652000A6552 /* FChannelLisener.swift */; };
-		E2DB6E88296D18FF000A6552 /* ChannelMSGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6E87296D18FF000A6552 /* ChannelMSGViewController.swift */; };
+		E2DB6E88296D18FF000A6552 /* GroupMSGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6E87296D18FF000A6552 /* GroupMSGViewController.swift */; };
 		E2DB6E8B296D27CF000A6552 /* MessagesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6E8A296D27CF000A6552 /* MessagesDataSource.swift */; };
 		E2E7253D28F845C20044D034 /* BasicAudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E7253C28F845C20044D034 /* BasicAudioController.swift */; };
 /* End PBXBuildFile section */
@@ -143,7 +143,7 @@
 		E2DB6E7B296CDD73000A6552 /* ChannelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableViewCell.swift; sourceTree = "<group>"; };
 		E2DB6E7F296CE08B000A6552 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		E2DB6E83296CF652000A6552 /* FChannelLisener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FChannelLisener.swift; sourceTree = "<group>"; };
-		E2DB6E87296D18FF000A6552 /* ChannelMSGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelMSGViewController.swift; sourceTree = "<group>"; };
+		E2DB6E87296D18FF000A6552 /* GroupMSGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMSGViewController.swift; sourceTree = "<group>"; };
 		E2DB6E8A296D27CF000A6552 /* MessagesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesDataSource.swift; sourceTree = "<group>"; };
 		E2E7253C28F845C20044D034 /* BasicAudioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAudioController.swift; sourceTree = "<group>"; };
 		E2F3747229358D1900EFCB19 /* ImagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesController.swift; sourceTree = "<group>"; };
@@ -213,6 +213,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07A8BADE2A4AE96F00C9DC6F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E208A0DE28CD9BFF00F2392D /* SceneDelegate.swift */,
+				E208A0DC28CD9BFF00F2392D /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		9AF81A48539C8F6BAFC49572 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +252,7 @@
 		E208A0DB28CD9BFF00F2392D /* Dardasha */ = {
 			isa = PBXGroup;
 			children = (
+				07A8BADE2A4AE96F00C9DC6F /* App */,
 				E26B64E82A42C7F40083EFD6 /* CellViews */,
 				E28B252D28CDE51300ABBD7E /* Helpers */,
 				E28B252128CDBE0C00ABBD7E /* Model */,
@@ -255,21 +265,6 @@
 			path = Dardasha;
 			sourceTree = "<group>";
 		};
-		E234B87A2A441A3F007B5B54 /* New */ = {
-			isa = PBXGroup;
-			children = (
-				E234B8882A447216007B5B54 /* LoginViewController.swift */,
-				0701E8BD2A4970E800416018 /* EmailVerificationViewController.swift */,
-				E234B8892A447217007B5B54 /* RegisterViewController.swift */,
-				E26B65012A42F5CE0083EFD6 /* ChatsViewController.swift */,
-				E2987E262A4306F3005E52E8 /* ProfileViewController.swift */,
-				E2987E282A4306FB005E52E8 /* EditProfileViewController.swift */,
-				E234B8822A44576D007B5B54 /* UsersViewController.swift */,
-				E234B87F2A443C70007B5B54 /* Group */,
-			);
-			path = New;
-			sourceTree = "<group>";
-		};
 		E234B87F2A443C70007B5B54 /* Group */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,7 +272,7 @@
 				E234B87B2A441AC8007B5B54 /* FollowGroupViewController.swift */,
 				E234B87D2A44276C007B5B54 /* AboutGroupViewController.swift */,
 				E234B8802A443C8D007B5B54 /* CreateGroupViewController.swift */,
-				E2DB6E87296D18FF000A6552 /* ChannelMSGViewController.swift */,
+				E2DB6E87296D18FF000A6552 /* GroupMSGViewController.swift */,
 			);
 			path = Group;
 			sourceTree = "<group>";
@@ -332,11 +327,16 @@
 		E28B252328CDBE3600ABBD7E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E208A0DC28CD9BFF00F2392D /* AppDelegate.swift */,
-				E208A0DE28CD9BFF00F2392D /* SceneDelegate.swift */,
-				E234B87A2A441A3F007B5B54 /* New */,
-				E2D3218D28D052E5004B9518 /* MSGViewController */,
+				E234B8882A447216007B5B54 /* LoginViewController.swift */,
+				0701E8BD2A4970E800416018 /* EmailVerificationViewController.swift */,
+				E234B8892A447217007B5B54 /* RegisterViewController.swift */,
+				E234B8822A44576D007B5B54 /* UsersViewController.swift */,
+				E26B65012A42F5CE0083EFD6 /* ChatsViewController.swift */,
+				E2987E262A4306F3005E52E8 /* ProfileViewController.swift */,
+				E2987E282A4306FB005E52E8 /* EditProfileViewController.swift */,
 				E2C164B428F832CA00BF30BF /* MapViewController.swift */,
+				E2D3218D28D052E5004B9518 /* MSGViewController */,
+				E234B87F2A443C70007B5B54 /* Group */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -691,7 +691,7 @@
 				E2C164B328F8311900BF30BF /* LocationMessgae.swift in Sources */,
 				E2DB6E84296CF652000A6552 /* FChannelLisener.swift in Sources */,
 				E2D321A328D06A1D004B9518 /* Incoming.swift in Sources */,
-				E2DB6E88296D18FF000A6552 /* ChannelMSGViewController.swift in Sources */,
+				E2DB6E88296D18FF000A6552 /* GroupMSGViewController.swift in Sources */,
 				E2D3219728D05398004B9518 /* InputBarAccessoryViewDelegate.swift in Sources */,
 				E2C164B928F8365400BF30BF /* AudioRecorder.swift in Sources */,
 				E2D3219F28D06305004B9518 /* FMessageListener.swift in Sources */,
@@ -890,7 +890,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 2WTTDWZDQX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Dardasha/Info.plist;
@@ -909,7 +909,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lulu.Dardasha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -928,7 +928,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 2WTTDWZDQX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Dardasha/Info.plist;
@@ -947,7 +947,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lulu.Dardasha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

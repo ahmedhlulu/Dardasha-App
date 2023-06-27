@@ -29,7 +29,7 @@ extension MSGViewController: InputBarAccessoryViewDelegate {
 }
 
 // MARK: - Channel
-extension ChannelMSGViewController: InputBarAccessoryViewDelegate {
+extension GroupMSGViewController: InputBarAccessoryViewDelegate {
     
     func inputBar(_ inputBar: InputBarAccessoryView, textViewTextDidChangeTo text: String) {
         
