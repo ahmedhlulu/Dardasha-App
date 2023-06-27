@@ -53,10 +53,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     // MARK: - Auto login
     func autoLogin(){
-        if Auth.auth().currentUser != nil && userDefaults.object(forKey: kCURRENTUSER) != nil{
-            let mainView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainView") as! UITabBarController
-            self.window?.rootViewController = mainView
-        }
+        guard let user = Auth.auth().currentUser ,user.isEmailVerified,userDefaults.object(forKey: kCURRENTUSER) != nil else {return}
+        guard let mainView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainView") as? UITabBarController else {return}
+        self.window?.rootViewController = mainView
     }
 }
 

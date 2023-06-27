@@ -8,6 +8,7 @@
 import Foundation
 import FirebaseAuth
 import RealmSwift
+import ProgressHUD
 
 class FUserListener {
     
@@ -30,47 +31,64 @@ class FUserListener {
     
     
     // TODO: Register
-    func registerUserWith(email:String, password:String, username:String,image: UIImage?, completion: @escaping (_ error:Error?)-> Void) {
-        Auth.auth().createUser(withEmail: email, password: password) { authResults, error in
-            guard let result = authResults, error == nil else {
-                completion(error)
+    func registerUserWith(email:String, password:String, username:String,image: UIImage?, completion: @escaping (_ error:String?)-> Void) {
+        self.downloadAllUserFromFirestore { users in
+            var usernameUsed = false
+            for user in users {
+                if user.username == username {
+                    usernameUsed = true
+                }
+            }
+            guard !usernameUsed else {
+                completion("Username is taken \n Please use another username.")
                 return
             }
-            
-            
-            result.user.sendEmailVerification { error in
-                if error != nil{
-                    completion(error)
+            Auth.auth().createUser(withEmail: email, password: password) { authResults, error in
+                guard let result = authResults, error == nil else {
+                    completion(error!.localizedDescription)
+                    return
                 }
-            }
-            
-            var user = User(id: result.user.uid,
-                            username: username,
-                            email: email,
-                            memberDate: Date(),
-                            avatarLink: "",
-                            status: "Welcome, I'm \(username)")
-            
-            if let image = image {
-                let fileDirectory = "Avatars/_\(result.user.uid).jpg"
-                FileStorage.uploadImage(image, directory: fileDirectory) { photoLink in
-                    user.avatarLink = photoLink ?? ""
+                
+                
+                result.user.sendEmailVerification { error in
+                    if error != nil{
+                        completion(error!.localizedDescription)
+                    }
+                }
+                
+                var user = User(id: result.user.uid,
+                                username: username,
+                                email: email,
+                                memberDate: Date(),
+                                avatarLink: "",
+                                status: "Welcome, I'm \(username)")
+                
+                if let image = image {
+                    let fileDirectory = "Avatars/_\(result.user.uid).jpg"
+                    FileStorage.uploadImage(image, directory: fileDirectory) { photoLink in
+                        user.avatarLink = photoLink ?? ""
+                        self.saveUserToFirestore(user)
+                        saveUserLocally(user)
+                        completion(nil)
+                    }
+                }else {
                     self.saveUserToFirestore(user)
                     saveUserLocally(user)
+                    completion(nil)
                 }
-            }else {
-                self.saveUserToFirestore(user)
-                saveUserLocally(user)
             }
         }
+        
     }
     
     // MARK: - resendLinkVerification
-    func resendLinkVerification(email : String, completion: @escaping(_ error : Error?) -> Void) {
-        Auth.auth().currentUser?.reload(completion: { error in
-            Auth.auth().currentUser?.sendEmailVerification(completion: { error in
-                completion(error)
-            })
+    func resendLinkVerification(completion: @escaping(_ error : String?) -> Void) {
+        Auth.auth().currentUser?.sendEmailVerification(completion: { error in
+            guard error == nil else {
+                completion(error!.localizedDescription)
+                return
+            }
+            completion(nil)
         })
     }
     
@@ -126,10 +144,11 @@ class FUserListener {
         }
     }
     
-    func downloadUserFromFirestoreWith(userId:String, completion: @escaping (_ user: User) -> Void){
+    func downloadUserFromFirestoreWith(userId:String, completion: @escaping (_ user: User?) -> Void){
         FirestoreReference(.User).document(userId).getDocument { document, error in
             guard let userDocument = document else {
                 print("No data found")
+                completion(nil)
                 return
             }
             let result = Result {
@@ -140,11 +159,13 @@ class FUserListener {
             case .success(let user):
                     guard let user = user else {
                         print("Document not exist")
+                        completion(nil)
                         return
                     }
                     completion(user)
             case .failure(let error):
                 print("Error decoding user: ",error.localizedDescription)
+                completion(nil)
             }
         }
     }
@@ -170,10 +191,7 @@ class FUserListener {
     }
     
     func downloadAllUserFromFirestore(completion: @escaping (_ allUsers: [User]) -> Void){
-        
-        var users: [User] = []
-        
-        FirestoreReference(.User).getDocuments { snapShot, error in
+            FirestoreReference(.User).getDocuments { snapShot, error in
             guard let document = snapShot?.documents else {
                 print("No document found")
                 return
@@ -182,12 +200,7 @@ class FUserListener {
             let allUsersDocument = document.compactMap { queryDocumentSnapshot -> User? in
                 return try? queryDocumentSnapshot.data(as: User.self)
             }
-            for user in allUsersDocument {
-                if user.id != User.currentId {
-                    users.append(user)
-                }
-            }
-            completion(users)
+            completion(allUsersDocument)
         }
     }
 }

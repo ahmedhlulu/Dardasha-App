@@ -50,7 +50,14 @@ class UsersViewController: UIViewController {
     // MARK: - Download Channels
     private func downloadAllUsers(){
         FUserListener.shared.downloadAllUserFromFirestore { allUsers in
-            self.allUsers = allUsers
+            var users = [User]()
+            for user in allUsers {
+                if user != User.currentUser! {
+                    users.append(user)
+                }
+            }
+            
+            self.allUsers = users
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }

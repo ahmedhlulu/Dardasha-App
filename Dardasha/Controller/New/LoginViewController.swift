@@ -38,10 +38,6 @@ class LoginViewController: UIViewController {
         emailTF.text != "" ? forgetPassword() : ProgressHUD.showError("Email is required")
     }
     
-    @IBAction func resendEmailCliced(_ sender: Any) {
-        emailTF.text != "" ? resendVerificationEmail() : ProgressHUD.showError("Email is required")
-    }
-    
     @IBAction func loginClicked(_ sender: Any) {
         checkData() ? loginUser() : ProgressHUD.showError("All Fields are required")
     }
@@ -74,17 +70,6 @@ class LoginViewController: UIViewController {
                 return
             }
             self.goToApp()
-        }
-    }
-    
-    // MARK: - resendVerificationEmail
-    func resendVerificationEmail(){
-        FUserListener.shared.resendLinkVerification(email: emailTF.text!) { error in
-            guard error == nil else {
-                ProgressHUD.showFailed(error!.localizedDescription)
-                return
-            }
-            ProgressHUD.showSucceed("Verification email send")
         }
     }
     

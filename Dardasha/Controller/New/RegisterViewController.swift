@@ -79,14 +79,15 @@ class RegisterViewController: UIViewController {
     private func registerUser(){
         if passwordTF.text! == confermPassTF.text! {
             FUserListener.shared.registerUserWith(email: emailTF.text!, password: passwordTF.text!, username: usernameTF.text!.lowercased(), image: avatarChanged ? avatarImageView.image : nil) { error in
-                guard error == nil else {
-                    ProgressHUD.showError(error!.localizedDescription)
-                    return
+                if error != nil {
+                    ProgressHUD.showError(error)
+                }else{
+                    ProgressHUD.showSuccess("Varification email send, please check your email")
+                    self.passwordTF.text = ""
+                    self.confermPassTF.text = ""
+                    print(User.currentUser)
                 }
             }
-            ProgressHUD.showSuccess("Varification email send, please check your email")
-            passwordTF.text = ""
-            confermPassTF.text = ""
         }else {
             ProgressHUD.showError("Password is not same")
         }

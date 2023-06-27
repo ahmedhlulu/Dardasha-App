@@ -17,7 +17,6 @@ class ChannelMSGViewController: MessagesViewController {
     let leftBarButtonView: UIView = {
         let view = UIView()
         view.frame = CGRect(x: 0, y: 0, width: 300, height: 50)
-//        view.backgroundColor = .red
         return view
     }()
     let titleLabel: UILabel = {
@@ -61,7 +60,6 @@ class ChannelMSGViewController: MessagesViewController {
     var maxMessageNumber = 0
     var minMessageNumber = 0
     
-//    var typingCounter = 0
     
     var gallery : GalleryController!
     
@@ -86,6 +84,8 @@ class ChannelMSGViewController: MessagesViewController {
         super.init(coder: coder)
         
     }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

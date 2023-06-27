@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C3B0DE6BCAB3392010D85815 /* Pods_Dardasha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C6CB441D7CF9DE01AC21F0 /* Pods_Dardasha.framework */; };
+		0701E8BE2A4970E800416018 /* EmailVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0701E8BD2A4970E800416018 /* EmailVerificationViewController.swift */; };
+		8827D18FBAB0E5D4686879F1 /* Pods_Dardasha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C686FD79C6E0FFA3C741AC /* Pods_Dardasha.framework */; };
 		E208A0DD28CD9BFF00F2392D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E208A0DC28CD9BFF00F2392D /* AppDelegate.swift */; };
 		E208A0DF28CD9BFF00F2392D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E208A0DE28CD9BFF00F2392D /* SceneDelegate.swift */; };
 		E208A0E428CD9BFF00F2392D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E208A0E228CD9BFF00F2392D /* Main.storyboard */; };
@@ -75,9 +76,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		57C6CB441D7CF9DE01AC21F0 /* Pods_Dardasha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dardasha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A85A34B387D067B0FD33EB8B /* Pods-Dardasha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dardasha.debug.xcconfig"; path = "Target Support Files/Pods-Dardasha/Pods-Dardasha.debug.xcconfig"; sourceTree = "<group>"; };
-		A9D469C6A4DC45E55EBF4C87 /* Pods-Dardasha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dardasha.release.xcconfig"; path = "Target Support Files/Pods-Dardasha/Pods-Dardasha.release.xcconfig"; sourceTree = "<group>"; };
+		0701E8BD2A4970E800416018 /* EmailVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVerificationViewController.swift; sourceTree = "<group>"; };
+		09AA374E435069510FA00A30 /* Pods-Dardasha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dardasha.release.xcconfig"; path = "Target Support Files/Pods-Dardasha/Pods-Dardasha.release.xcconfig"; sourceTree = "<group>"; };
+		50C686FD79C6E0FFA3C741AC /* Pods_Dardasha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dardasha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5954C62E343041D2CDDA6160 /* Pods-Dardasha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dardasha.debug.xcconfig"; path = "Target Support Files/Pods-Dardasha/Pods-Dardasha.debug.xcconfig"; sourceTree = "<group>"; };
 		E208A0D928CD9BFF00F2392D /* Dardasha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dardasha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E208A0DC28CD9BFF00F2392D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E208A0DE28CD9BFF00F2392D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -204,7 +206,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3B0DE6BCAB3392010D85815 /* Pods_Dardasha.framework in Frameworks */,
+				8827D18FBAB0E5D4686879F1 /* Pods_Dardasha.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,8 +216,8 @@
 		9AF81A48539C8F6BAFC49572 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A85A34B387D067B0FD33EB8B /* Pods-Dardasha.debug.xcconfig */,
-				A9D469C6A4DC45E55EBF4C87 /* Pods-Dardasha.release.xcconfig */,
+				5954C62E343041D2CDDA6160 /* Pods-Dardasha.debug.xcconfig */,
+				09AA374E435069510FA00A30 /* Pods-Dardasha.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -244,9 +246,9 @@
 				E26B64E82A42C7F40083EFD6 /* CellViews */,
 				E28B252D28CDE51300ABBD7E /* Helpers */,
 				E28B252128CDBE0C00ABBD7E /* Model */,
+				E28B252C28CDE4D100ABBD7E /* Firebase */,
 				E28B252228CDBE1E00ABBD7E /* Storyboard */,
 				E28B252328CDBE3600ABBD7E /* Controller */,
-				E28B252C28CDE4D100ABBD7E /* Firebase */,
 				E208A0E528CD9C0000F2392D /* Assets.xcassets */,
 				E208A0EA28CD9C0000F2392D /* Info.plist */,
 			);
@@ -257,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				E234B8882A447216007B5B54 /* LoginViewController.swift */,
+				0701E8BD2A4970E800416018 /* EmailVerificationViewController.swift */,
 				E234B8892A447217007B5B54 /* RegisterViewController.swift */,
 				E26B65012A42F5CE0083EFD6 /* ChatsViewController.swift */,
 				E2987E262A4306F3005E52E8 /* ProfileViewController.swift */,
@@ -394,7 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				E2F3746F29358D1900EFCB19 /* Sources */,
-				57C6CB441D7CF9DE01AC21F0 /* Pods_Dardasha.framework */,
+				50C686FD79C6E0FFA3C741AC /* Pods_Dardasha.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -571,11 +574,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E208A0ED28CD9C0000F2392D /* Build configuration list for PBXNativeTarget "Dardasha" */;
 			buildPhases = (
-				86B2400CD262C75872BD874A /* [CP] Check Pods Manifest.lock */,
+				9F03CDD3A99AF7D26E8BAE58 /* [CP] Check Pods Manifest.lock */,
 				E208A0D528CD9BFF00F2392D /* Sources */,
 				E208A0D628CD9BFF00F2392D /* Frameworks */,
 				E208A0D728CD9BFF00F2392D /* Resources */,
-				D4856648C10E95F6D2CB26B7 /* [CP] Embed Pods Frameworks */,
+				3BD3266E5ABFAC150B2E8D57 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -639,7 +642,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		86B2400CD262C75872BD874A /* [CP] Check Pods Manifest.lock */ = {
+		3BD3266E5ABFAC150B2E8D57 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dardasha/Pods-Dardasha-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dardasha/Pods-Dardasha-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dardasha/Pods-Dardasha-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F03CDD3A99AF7D26E8BAE58 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -659,23 +679,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D4856648C10E95F6D2CB26B7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dardasha/Pods-Dardasha-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dardasha/Pods-Dardasha-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dardasha/Pods-Dardasha-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -703,6 +706,7 @@
 				E234B87C2A441AC8007B5B54 /* FollowGroupViewController.swift in Sources */,
 				E28B253528CE055300ABBD7E /* Extenstions.swift in Sources */,
 				E2D3218028CF6647004B9518 /* ChatRoom.swift in Sources */,
+				0701E8BE2A4970E800416018 /* EmailVerificationViewController.swift in Sources */,
 				E2C164AE28F8236A00BF30BF /* VideoMessage.swift in Sources */,
 				E2D3219128D05360004B9518 /* MessagesCellDelegate.swift in Sources */,
 				E2D3218828CF7614004B9518 /* FChatRoomListener.swift in Sources */,
@@ -881,7 +885,7 @@
 		};
 		E208A0EE28CD9C0000F2392D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A85A34B387D067B0FD33EB8B /* Pods-Dardasha.debug.xcconfig */;
+			baseConfigurationReference = 5954C62E343041D2CDDA6160 /* Pods-Dardasha.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -919,7 +923,7 @@
 		};
 		E208A0EF28CD9C0000F2392D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9D469C6A4DC45E55EBF4C87 /* Pods-Dardasha.release.xcconfig */;
+			baseConfigurationReference = 09AA374E435069510FA00A30 /* Pods-Dardasha.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

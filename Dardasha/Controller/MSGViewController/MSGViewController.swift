@@ -17,7 +17,6 @@ class MSGViewController: MessagesViewController {
     let leftBarButtonView: UIView = {
         let view = UIView()
         view.frame = CGRect(x: 0, y: 0, width: 300, height: 50)
-//        view.backgroundColor = .red
         return view
     }()
     let titleLabel: UILabel = {
@@ -265,6 +264,7 @@ class MSGViewController: MessagesViewController {
     @objc func titleClicked(){
         guard let profileVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController else {return}
         FUserListener.shared.downloadUserFromFirestoreWith(userId: recipientId) { user in
+            guard let user = user else {return}
             profileVC.user = user
             self.navigationController?.pushViewController(profileVC, animated: true)
         }
