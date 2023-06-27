@@ -52,11 +52,7 @@ class ChannelMSGViewController: MessagesViewController {
     
     var notificationToken : NotificationToken?
     
-    var displayMessagesCount = 0 {
-        didSet{
-            self.messagesCollectionView.scrollToLastItem()
-        }
-    }
+    var displayMessagesCount = 0
     var maxMessageNumber = 0
     var minMessageNumber = 0
     
@@ -124,7 +120,7 @@ class ChannelMSGViewController: MessagesViewController {
         messagesCollectionView.messagesLayoutDelegate = self
         
         scrollsToLastItemOnKeyboardBeginsEditing = true
-//        maintainPositionOnInputBarHeightChanged = true
+//        maintainPositionOnKeyboardFrameChanged = true
         messagesCollectionView.refreshControl = refreshController
     }
     

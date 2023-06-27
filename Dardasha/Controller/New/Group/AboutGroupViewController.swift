@@ -46,8 +46,8 @@ class AboutGroupViewController: UIViewController {
         tableView.delegate = self
         
         tableView.backgroundColor = .clear
-        tableView.layer.borderWidth = CGFloat(2)
-        tableView.layer.cornerRadius = 20
+//        tableView.layer.borderWidth = CGFloat(2)
+//        tableView.layer.cornerRadius = 20
         
         tableView.register(UINib(nibName: "UsersTableViewCell", bundle: nil), forCellReuseIdentifier: "UsersTableViewCell")
         

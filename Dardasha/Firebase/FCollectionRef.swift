@@ -11,7 +11,7 @@ import FirebaseFirestore
 enum FCollectionReference : String {
     case User
     case Chat
-    case Message
+    case Messages
     case Typing
     case Channel
 }
